@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -34,6 +35,10 @@ namespace watchmen.webpageForms
         public event PropertyChangedEventHandler PropertyChanged;   //https://www.codeproject.com/Articles/301678/Step-by-Step-WPF-Data-Binding-with-Comboboxes   
         private AddonListForm addonListForm;
         private TabItem lastSelectedTabItem;
+        private string createDateMarker;
+        private string limitDateMarker;
+        private string fileAddonStartMarker;
+        private string fileAddonEndMarker;
 
         public WebPageForm(String webPageTitle, Color gardientLeftColor, Color gardientRightColor, ADDON_TYPES[] addonTypes, ProcessInterface processObject)
         {
@@ -54,7 +59,8 @@ namespace watchmen.webpageForms
             initMonthComboBox();
             initDayComboBox();
             initAddonTabs();
-            initBackgroundWorker();            
+            initBackgroundWorker();
+            initFileDates();
         }
 
         #region init components
@@ -123,6 +129,17 @@ namespace watchmen.webpageForms
             backgroundWorker.RunWorkerCompleted += backgroundWorker_RunWorkerCompleted;
             backgroundWorker.ProgressChanged += backgroundWorker_ProgressChanged;
         }
+
+        private void initFileDates()
+        {
+            createDateMarker = Properties.Resources.FILE_META_LINE_CHARACTER + "create";
+            limitDateMarker = Properties.Resources.FILE_META_LINE_CHARACTER + "limit";
+            fileAddonStartMarker = Properties.Resources.FILE_META_LINE_CHARACTER + "start";
+            fileAddonEndMarker = Properties.Resources.FILE_META_LINE_CHARACTER + "end";
+            createDate.Content = "-";
+            limitDate.Content = "-";
+        }
+
         #endregion;        
 
         #region ui component events (buttons, etc.)
@@ -156,7 +173,49 @@ namespace watchmen.webpageForms
                 }
             }
         }
+
+        private void saveButton_Click(object sender, RoutedEventArgs e)
+        {
+            saveToFile();
+        }
+
+        private void loadButton_Click(object sender, RoutedEventArgs e)
+        {
+            loadFromFile();
+        }
         #endregion        
+
+        private void saveToFile()
+        {
+            if (addonList != null && addonList.Count > 0)
+            {
+                using (StreamWriter outputFile = new StreamWriter(process.getFileName()))
+                {
+                    outputFile.WriteLine(createDateMarker + " " + wspd.utils.Utils.NowDate().ToString(wspd.utils.Utils.HungaryDateFormat()));
+                    outputFile.WriteLine(limitDateMarker + " " + new DateTime(selectedYear, selectedMonth, selectedDay).ToString(wspd.utils.Utils.HungaryDateFormat()));
+                    outputFile.WriteLine(fileAddonStartMarker + " ");
+                    foreach (AddonEntity addon in addonList)
+                    {
+                        outputFile.WriteLine(
+                            addon.ListIndex + Properties.Resources.FILE_SEPARATOR_CHARACTER +
+                            addon.Type + Properties.Resources.FILE_SEPARATOR_CHARACTER +
+                            addon.Name + Properties.Resources.FILE_SEPARATOR_CHARACTER +
+                            addon.AddonURL + Properties.Resources.FILE_SEPARATOR_CHARACTER +
+                            addon.Page + Properties.Resources.FILE_SEPARATOR_CHARACTER +
+                            addon.Year + Properties.Resources.FILE_SEPARATOR_CHARACTER +
+                            addon.Month + Properties.Resources.FILE_SEPARATOR_CHARACTER +
+                            addon.Day
+                        );
+                    }
+                    outputFile.WriteLine(fileAddonEndMarker + " ");
+                }
+            }
+        }
+
+        private void loadFromFile()
+        {
+            
+        }
 
         #region backgroundWorker vezérlő metódusok
         private void backgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -194,7 +253,7 @@ namespace watchmen.webpageForms
                 lastSelectedTabItem.Content = addonListForm;
                 addonTabs.UpdateLayout();
             }                        
-        }
+        }        
 
         #region getters/setters
         public string FormTitle { get => formTitle; set => formTitle = value; }
@@ -243,7 +302,6 @@ namespace watchmen.webpageForms
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-        #endregion
-        
+        #endregion        
     }
 }

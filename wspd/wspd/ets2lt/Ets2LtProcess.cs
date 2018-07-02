@@ -34,6 +34,16 @@ namespace wspd.ets2lt
             return addonList;
         }
 
+        public string getFileName()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string getParserName()
+        {
+            return "ets2.lt";
+        }
+
         public void startParsing(int selectedYear, int selectedMonth, int selectedDay)
         {
             int limitYear = 0;

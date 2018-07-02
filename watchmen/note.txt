@@ -9,3 +9,6 @@ Az egyes weboldalak esetében kell az addon elérhetőségi linkje, és a tábl�
 Splashscreen a program indulásakor, illetve ez legyen az About képernyő is.
 A Please Wait dialógus ablaknak kell lennie, és nem szabad rajta maradnia a Close gombnak a felső header-jében.
 A Please Wait ablakban működjön a progress bar.
+
+Process-ek:
+ets2.lt, skidrow-ok, spintires-es oldalak, 

@@ -9,8 +9,30 @@ namespace wspd.interfaces
 {    
     public interface ProcessInterface
     {
-        List<AddonEntity> getAddonList();
-
+        /// <summary>
+        /// Az adott weboldalt innen kezdi el felolvasni.
+        /// </summary>
+        /// <param name="selectedYear"></param>
+        /// <param name="selectedMonth"></param>
+        /// <param name="selectedDay"></param>
         void startParsing(int selectedYear, int selectedMonth, int selectedDay);
+
+        /// <summary>
+        /// Ebbe a listába jönnek vissza a kapott addon-ok.
+        /// </summary>
+        /// <returns></returns>
+        List<AddonEntity> getAddonList();        
+
+        /// <summary>
+        /// A parser neve, nincs jelentősége, ez jelenik meg a fejlécben címként az űrlapon.
+        /// </summary>
+        /// <returns></returns>
+        string getParserName();
+
+        /// <summary>
+        /// Az addonok file neve.
+        /// </summary>
+        /// <returns></returns>
+        string getFileName();
     }
 }

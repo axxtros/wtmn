@@ -11,6 +11,7 @@ namespace wspd.parsers
     class ArmaholicAddonsURL
     {
         public static String ARMAHOLIC_BASE_WEB_URL = @"http://www.armaholic.com/";
+        public static String ARMAHOLIC_FILE_NAME = @"armaholic_addons.txt";
 
         public static List<ArmaholicResource> ARMAHOLIC_RESOURCES = new List<ArmaholicResource> {
             //addons
@@ -56,7 +57,8 @@ namespace wspd.parsers
         private int selectedDay;
         private List<AddonEntity> armaholicAddonList;
         private HtmlWeb armaholicWeb;
-        private HtmlDocument armaholicDoc;        
+        private HtmlDocument armaholicDoc;
+        private int addonCounter;
 
         public ArmaholicParserProcess()
         {
@@ -70,6 +72,7 @@ namespace wspd.parsers
             this.selectedDay = selectedDay;
 
             armaholicAddonList = new List<AddonEntity>();
+            addonCounter = 0;
             armaholicWeb = new HtmlWeb();
             foreach (ArmaholicResource addonRes in ArmaholicAddonsURL.ARMAHOLIC_RESOURCES)
             {
@@ -145,7 +148,7 @@ namespace wspd.parsers
                             addonItem.Year = Int32.Parse(addonYear);
                             addonItem.Month = Int32.Parse(addonMonth);
                             addonItem.Day = Int32.Parse(addonDay);
-                            addonItem.ListIndex = 0;                            
+                            addonItem.ListIndex = ++addonCounter;                            
                             addAddonItemToFilteredList(addonItem);
                             Console.WriteLine(addonDate + " year: " + addonYear + " month: " + addonMonth + " day: " + addonDay);
                         }
@@ -188,6 +191,16 @@ namespace wspd.parsers
         public List<AddonEntity> getAddonList()
         {
             return armaholicAddonList != null ? armaholicAddonList : new List<AddonEntity>();
+        }
+
+        public string getParserName()
+        {
+            return ArmaholicAddonsURL.ARMAHOLIC_BASE_WEB_URL;
+        }
+
+        public string getFileName()
+        {
+            return ArmaholicAddonsURL.ARMAHOLIC_FILE_NAME;
         }
         #endregion
     }

@@ -49,8 +49,8 @@
             <Label Content="{x:Static resx:Resources.limit_date}" Height="30" VerticalAlignment="Center" Margin="10, 10, 0, 0"/>
             <Label Name="limitDate" Height="40" VerticalAlignment="Center" Margin="10, 10, 0, 0"/>
             
-            <Button Name="saveAddons" Content="{x:Static resx:Resources.save_addons}" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="60" Height="20"/>
-            <Button Name="loadAddons" Content="{x:Static resx:Resources.load_addons}" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="60" Height="20"/>
+            <Button Name="saveButton" Content="{x:Static resx:Resources.save_addons}" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="60" Height="20" Click="saveButton_Click"/>
+            <Button Name="loadButton" Content="{x:Static resx:Resources.load_addons}" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="60" Height="20" Click="loadButton_Click"/>
         </DockPanel>
 
         <DockPanel Name="contentPanel" Grid.Column="0" Grid.Row="2" Margin="0, 0, 0, 0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="White">

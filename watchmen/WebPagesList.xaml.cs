@@ -67,13 +67,6 @@ namespace watchmen
             switch (buttonID)
             {
                 case "armaholic":
-                    currentUserCtrl = new webpageForms.ArmaholicForm(this.wspdEngine);                    
-                    //wspdEngine.webpageParser(wspd.WEBPAGE_ID.ARMAHOLIC);
-                    break;
-                case "ets2lt":
-                    //wspdEngine.webpageParser(wspd.WEBPAGE_ID.ETS2_LT);
-                    break;
-                case "test":
                     ADDON_TYPES[] addonTypes = {
                         ADDON_TYPES.GEAR,
                         ADDON_TYPES.PACKS,
@@ -93,8 +86,11 @@ namespace watchmen
                         ADDON_TYPES.WHEELED
                     };
                     ArmaholicParserProcess process = new ArmaholicParserProcess();
-                    currentUserCtrl = new webpageForms.WebPageForm("Teszt", Colors.Red, Colors.Yellow, addonTypes, process);
+                    currentUserCtrl = new webpageForms.WebPageForm(process.getParserName(), Color.FromArgb(255, 227, 225, 214), Color.FromArgb(255, 136, 119, 93), addonTypes, process);
                     break;
+                case "ets2lt":
+                    //wspdEngine.webpageParser(wspd.WEBPAGE_ID.ETS2_LT);
+                    break;                
             }
             if(currentUserCtrl != null)
             {
