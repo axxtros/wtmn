@@ -34,13 +34,13 @@
 
         <DockPanel Name="contentHeaderPanel" Grid.Column="0" Grid.Row="1" Margin="0, 0, 0, 0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="White">
             <Label Content="{x:Static resx:Resources.year}" Height="28" VerticalAlignment="Center" Margin="10,10,0,0" />
-            <ComboBox Name="yearComboBox" SelectedValue="{Binding Path=selectedYear}" Margin="0, 10, 10, 10" Width="60" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+            <ComboBox Name="yearComboBox" SelectedItem="{Binding Path=SelectedYear}" Margin="0, 10, 10, 10" Width="60" FontWeight="Bold" HorizontalContentAlignment="Center"/>
 
             <Label Content="{x:Static resx:Resources.month}" Height="30" VerticalAlignment="Center" Margin="0,10,0,0"/>
-            <ComboBox Name="montComboBox" SelectedValue="{Binding Path=selectedMonth}" Margin="0, 10, 10, 10" Width="60" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+            <ComboBox Name="montComboBox" SelectedItem="{Binding Path=SelectedMonth}" Margin="0, 10, 10, 10" Width="60" FontWeight="Bold" HorizontalContentAlignment="Center"/>
 
             <Label Content="{x:Static resx:Resources.day}" Height="30" VerticalAlignment="Center" Margin="0,10,0,0"/>
-            <ComboBox Name="dayComboBox" SelectedValue="{Binding Path=selectedDay}" Margin="0, 10, 10, 10" Width="60" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+            <ComboBox Name="dayComboBox" SelectedItem="{Binding Path=SelectedDay}" Margin="0, 10, 10, 10" Width="60" FontWeight="Bold" HorizontalContentAlignment="Center"/>
 
             <Button Name="parserButton" Content="{x:Static resx:Resources.search_start}" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Height="20" Click="parserButton_Click"/>
             

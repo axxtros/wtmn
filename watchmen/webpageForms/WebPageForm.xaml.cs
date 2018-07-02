@@ -13,13 +13,15 @@ namespace watchmen.webpageForms
     /// <summary>
     /// Interaction logic for WebPageForm.xaml
     /// </summary>
-    public partial class WebPageForm : UserControl
+    public partial class WebPageForm : UserControl, INotifyPropertyChanged
     {
         private readonly int TABITEM_HEIGHT = 30;
+        private readonly int MINUS_YEARS = 10;
 
         private String formTitle;
         private Color leftColor;
         private Color rightColor;
+        private DateTime now;
         private int selectedYear;
         private int selectedMonth;
         private int selectedDay;
@@ -28,7 +30,7 @@ namespace watchmen.webpageForms
         private ProcessInterface process;
         private ProgressBarDialogWindow progressBarDialogWindow;
         private BackgroundWorker backgroundWorker; //http://www.codescratcher.com/wpf/progress-bar-in-wpf-backgroundworker/
-        public event PropertyChangedEventHandler PropertyChanged;        
+        public event PropertyChangedEventHandler PropertyChanged;   //https://www.codeproject.com/Articles/301678/Step-by-Step-WPF-Data-Binding-with-Comboboxes        
 
         public WebPageForm(String webPageTitle, Color gardientLeftColor, Color gardientRightColor, ADDON_TYPES[] addonTypes, ProcessInterface processObject)
         {
@@ -36,6 +38,7 @@ namespace watchmen.webpageForms
             this.addonList = new List<AddonEntity>();
             this.addonTypes = addonTypes;
             this.process = processObject;
+            this.now = DateTime.Now;
             init(webPageTitle, gardientLeftColor, gardientRightColor);
             this.DataContext = this;
         }
@@ -48,7 +51,7 @@ namespace watchmen.webpageForms
             initMonthComboBox();
             initDayComboBox();
             initAddonTabs();
-            initBackgroundWorker();             
+            initBackgroundWorker();            
         }
 
         #region init components
@@ -68,45 +71,31 @@ namespace watchmen.webpageForms
 
         private void initYearComboBox()
         {
-            int currentYear = DateTime.Now.Year;
-            for (int minusYear = 0; minusYear != 10; minusYear++)
+            int currentYear = now.Year;
+            for (int minusYear = 0; minusYear != MINUS_YEARS; minusYear++)
             {
                 yearComboBox.Items.Add(currentYear - minusYear);
             }
-            yearComboBox.SelectedIndex = 0;            
-            SelectedYear = (int)yearComboBox.SelectedItem;            
+            SelectedYear = yearComboBox.SelectedIndex = now.Year;
         }
 
         private void initMonthComboBox()
         {
             for (int monthIdx = 1; monthIdx <= 12; monthIdx++)
             {
-                montComboBox.Items.Add(monthIdx);
-                if (monthIdx == DateTime.Now.Month)
-                {
-                    selectedMonth = (monthIdx - 1);
-                    montComboBox.SelectedIndex = selectedMonth;
-                }
+                montComboBox.Items.Add(monthIdx);                
             }
+            SelectedMonth = montComboBox.SelectedIndex = now.Month;
         }
 
         private void initDayComboBox()
-        {
-            if (!dayComboBox.Items.IsEmpty)
-            {
-                dayComboBox.SelectedIndex = -1;
-                dayComboBox.Items.Clear();
-            }
-            int monthDays = 31; //DateTime.DaysInMonth(selectedYear, selectedMonth);
+        {            
+            int monthDays = 31;
             for (int dayIdx = 1; dayIdx <= monthDays; dayIdx++)
             {
-                dayComboBox.Items.Add(dayIdx);
-                if (dayIdx == DateTime.Now.Day)
-                {
-                    selectedDay = (dayIdx - 1);
-                    dayComboBox.SelectedIndex = selectedDay;
-                }
+                dayComboBox.Items.Add(dayIdx);                
             }
+            SelectedDay = dayComboBox.SelectedIndex = now.Day;
         }
 
         private void initAddonTabs()
@@ -168,18 +157,56 @@ namespace watchmen.webpageForms
             progressBarDialogWindow.Close();
             //refreshAddonTabControl();
         }
-        #endregion
-
+        #endregion        
 
         #region getters/setters
         public string FormTitle { get => formTitle; set => formTitle = value; }
         public Color LeftColor { get => leftColor; set => leftColor = value; }
         public Color RightColor { get => rightColor; set => rightColor = value; }
-        public int SelectedYear { get => selectedYear; set => selectedYear = value; }        
-        public int SelectedMonth { get => selectedMonth; set => selectedMonth = value; }
-        public int SelectedDay { get => selectedDay; set => selectedDay = value; }
+        public int SelectedYear { get => selectedYear;
+            //set => selectedYear = value;
+            set
+            {
+                if (selectedYear != value)
+                {
+                    selectedYear = value;
+                    NotifyPropertyChanged("SelectedYear");
+                }
+            }
+        }        
+        public int SelectedMonth { get => selectedMonth;
+            //set => selectedMonth = value; 
+            set
+            {
+                if (selectedMonth != value)
+                {
+                    selectedMonth = value;
+                    NotifyPropertyChanged("SelectedMonth");
+                }
+            }
+        }
+        public int SelectedDay { get => selectedDay;
+            //set => selectedDay = value;
+            set
+            {
+                if (selectedDay != value)
+                {
+                    selectedDay = value;
+                    NotifyPropertyChanged("SelectedDay");
+                }
+            }
+        }
         #endregion
-        
+
+        #region NotifyPropertyChanged
+        private void NotifyPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+        #endregion
 
     }
 }
