@@ -1,0 +1,11 @@
+﻿
+WPF: Grid teljes méretű széthúzása, akorrára, mint az ablak: https://stackoverflow.com/questions/7521841/stretch-grid-to-window-size
+WPF: Side menu: https://stackoverflow.com/questions/32397972/wpf-create-sidebar-navigation
+
+BackgroundWorker tutorial: http://www.codescratcher.com/wpf/progress-bar-in-wpf-backgroundworker/
+
+Feladatok:
+Az egyes weboldalak esetében kell az addon elérhetőségi linkje, és a táblázatból közvetlenül lehessen megnyitni az alapértelmezett browser-ben. OK
+Splashscreen a program indulásakor, illetve ez legyen az About képernyő is.
+A Please Wait dialógus ablaknak kell lennie, és nem szabad rajta maradnia a Close gombnak a felső header-jében.
+A Please Wait ablakban működjön a progress bar.

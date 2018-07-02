@@ -1,0 +1,38 @@
+﻿<Window x:Class="watchmen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:watchmen"
+        xmlns:resx="clr-namespace:watchmen.Properties"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowState="Maximized">
+    <Grid>
+        <DockPanel HorizontalAlignment="Stretch" Height="40" LastChildFill="False" VerticalAlignment="Top">
+            <ToolBar Height="40" VerticalAlignment="Top" HorizontalAlignment="Stretch" MinWidth="{Binding ActualWidth, RelativeSource = {RelativeSource AncestorType = {x:Type Window}}}">
+                <Button Name="exitButton" Width="30" Height="30" VerticalAlignment="Center" Click="exitButton_Click" ToolTip="{x:Static resx:Resources.exit}">
+                    <StackPanel>
+                        <Image Source="images/exit_48x48.png" Height="20" Width="20"/>
+                    </StackPanel>
+                </Button>
+            </ToolBar>
+        </DockPanel>
+        <DockPanel HorizontalAlignment="Stretch" Height="50" LastChildFill="False" VerticalAlignment="Bottom" Background="#FFC6E8FF"/>
+        <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" LastChildFill="False" Margin="0, 50, 0, 50">
+            <Grid Width="{Binding ActualWidth, RelativeSource = {RelativeSource AncestorType = {x:Type Window}}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <DockPanel Name="webPagesListPanel" Grid.Row="0" Grid.Column="0" >
+                    <!--<Label Content="AAAAAA" />-->
+                </DockPanel>
+                <GridSplitter Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="Black" Background="#FFCBCBCB"/>
+                <DockPanel Name="contentPanel" Grid.Row="0" Grid.Column="2" >
+                    <!--<Label Content="AAAAAA" />-->
+                </DockPanel>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>
