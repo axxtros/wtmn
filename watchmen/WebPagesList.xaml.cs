@@ -12,8 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using wspd.armaholic;
+//using wspd.armaholic;
 using wspd.commons.entity;
+using wspd.parsers;
 
 namespace watchmen
 {
@@ -91,7 +92,7 @@ namespace watchmen
                         ADDON_TYPES.SEA,
                         ADDON_TYPES.WHEELED
                     };
-                    ArmaholicProcess process = new ArmaholicProcess();
+                    ArmaholicParserProcess process = new ArmaholicParserProcess();
                     currentUserCtrl = new webpageForms.WebPageForm("Teszt", Colors.Red, Colors.Yellow, addonTypes, process);
                     break;
             }

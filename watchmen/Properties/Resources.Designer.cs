@@ -331,6 +331,15 @@ namespace watchmen.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Frissítés.
+        /// </summary>
+        public static string refresh {
+            get {
+                return ResourceManager.GetString("refresh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mentés.
         /// </summary>
         public static string save_addons {

@@ -45,13 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="armaholic\ArmaholicAddonsURL.cs" />
-    <Compile Include="armaholic\ArmaholicParser.cs" />
-    <Compile Include="armaholic\ArmaholicProcess.cs" />
     <Compile Include="commons\AddonEntity.cs" />
     <Compile Include="ets2lt\Ets2LtParser.cs" />
     <Compile Include="ets2lt\Ets2LtProcess.cs" />
     <Compile Include="interfaces\ProcessInterface.cs" />
+    <Compile Include="parsers\ArmaholicParserProcess.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\StaticResources.cs" />

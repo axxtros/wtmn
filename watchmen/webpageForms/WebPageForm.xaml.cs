@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using watchmen.commonForms;
 using wspd.commons.entity;
 using wspd.interfaces;
 
@@ -30,7 +31,9 @@ namespace watchmen.webpageForms
         private ProcessInterface process;
         private ProgressBarDialogWindow progressBarDialogWindow;
         private BackgroundWorker backgroundWorker; //http://www.codescratcher.com/wpf/progress-bar-in-wpf-backgroundworker/
-        public event PropertyChangedEventHandler PropertyChanged;   //https://www.codeproject.com/Articles/301678/Step-by-Step-WPF-Data-Binding-with-Comboboxes        
+        public event PropertyChangedEventHandler PropertyChanged;   //https://www.codeproject.com/Articles/301678/Step-by-Step-WPF-Data-Binding-with-Comboboxes   
+        private AddonListForm addonListForm;
+        private TabItem lastSelectedTabItem;
 
         public WebPageForm(String webPageTitle, Color gardientLeftColor, Color gardientRightColor, ADDON_TYPES[] addonTypes, ProcessInterface processObject)
         {
@@ -131,6 +134,28 @@ namespace watchmen.webpageForms
             progressBarDialogWindow.Show();
             backgroundWorker.RunWorkerAsync();
         }
+
+        private void addonTabs_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.Source is TabControl)
+            {
+                var tabControl = sender as TabControl;
+                TabItem selectedTabItem = null;
+                if (tabControl != null)
+                {
+                    selectedTabItem = (TabItem)tabControl.SelectedItem;
+                }
+                if (selectedTabItem != null && addonList != null && (addonList.Count > 0))
+                {
+                    this.addonListForm = new AddonListForm(addonList, selectedTabItem.Name);
+                    selectedTabItem.Content = addonListForm;                    
+                }
+                if(selectedTabItem != null)
+                {
+                    lastSelectedTabItem = selectedTabItem;
+                }
+            }
+        }
         #endregion        
 
         #region backgroundWorker vezérlő metódusok
@@ -148,16 +173,28 @@ namespace watchmen.webpageForms
 
         private void webProcess()
         {            
-            process.startParsing(SelectedYear, selectedMonth, selectedDay);
+            process.startParsing(SelectedYear, SelectedMonth, SelectedDay);
             this.addonList = process.getAddonList();
         }
 
         private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             progressBarDialogWindow.Close();
-            //refreshAddonTabControl();
+            refreshAddonTabControl();
         }
         #endregion        
+
+        
+        //Programozottan a háttérből frissíti az addonTabControl-t, anélkül, hogy arra az UI-n rákattintottak volna.        
+        private void refreshAddonTabControl()
+        {        
+            if(lastSelectedTabItem != null)
+            {
+                this.addonListForm = new AddonListForm(addonList, lastSelectedTabItem.Name);
+                lastSelectedTabItem.Content = addonListForm;
+                addonTabs.UpdateLayout();
+            }                        
+        }
 
         #region getters/setters
         public string FormTitle { get => formTitle; set => formTitle = value; }
@@ -207,6 +244,6 @@ namespace watchmen.webpageForms
             }
         }
         #endregion
-
+        
     }
 }

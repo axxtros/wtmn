@@ -11,6 +11,6 @@ namespace wspd.interfaces
     {
         List<AddonEntity> getAddonList();
 
-        void startParsing(int limitYear, int limitMonth, int limitDay);
+        void startParsing(int selectedYear, int selectedMonth, int selectedDay);
     }
 }

@@ -55,7 +55,7 @@
 
         <DockPanel Name="contentPanel" Grid.Column="0" Grid.Row="2" Margin="0, 0, 0, 0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="White">
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Width="Auto" Height="Auto">
-                <TabControl Name="addonTabs" TabStripPlacement="Left" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" >
+                <TabControl Name="addonTabs" TabStripPlacement="Left" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" SelectionChanged="addonTabs_SelectionChanged" >
                     <!--<TabItem Name="templateTabItem" Header="{x:Static resx:Resources.ARMAHOLIC_WHEELED}" Width="{StaticResource tabItemWidth}" />-->
                 </TabControl>
             </ScrollViewer>

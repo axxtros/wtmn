@@ -216,4 +216,7 @@
   <data name="FILE_META_LINE_CHARACTER" xml:space="preserve">
     <value>#</value>
   </data>
+  <data name="refresh" xml:space="preserve">
+    <value>Frissítés</value>
+  </data>
 </root>

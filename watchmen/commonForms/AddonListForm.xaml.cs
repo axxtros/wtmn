@@ -41,12 +41,7 @@ namespace watchmen.commonForms
                 addonQuery = addonList.Where(list => list.Type.ToString() == addonTypeName);
                 if (addonQuery != null)
                 {
-                    addonQuery = addonQuery.OrderByDescending(item => item.Year).ThenByDescending(item => item.Month).ThenByDescending(item => item.Day);
-                    int index = 1;
-                    foreach (AddonEntity item in addonQuery)
-                    {
-                        item.ListIndex = index++;
-                    }
+                    addonQuery = addonQuery.OrderByDescending(item => item.Year).ThenByDescending(item => item.Month).ThenByDescending(item => item.Day);                    
                     addonDataGrid.ItemsSource = addonQuery;
                 }
             }            

@@ -42,14 +42,14 @@ namespace wspd
             {
                 case WEBPAGE_ID.ARMAHOLIC:
                     //armaholic.com
-                    armaholic.ArmaholicProcess armaholicProcess = new armaholic.ArmaholicProcess(selectedYear, selectedMonth, selectedDay);
-                    armaholicProcess.startParsing(selectedYear, selectedMonth, selectedDay);
-                    this.armaholicAddonList = armaholicProcess.ArmaholicAddonList;
+                    //armaholic.ArmaholicProcess armaholicProcess = new armaholic.ArmaholicProcess(selectedYear, selectedMonth, selectedDay);
+                    //armaholicProcess.startParsing(selectedYear, selectedMonth, selectedDay);
+                    //this.armaholicAddonList = armaholicProcess.ArmaholicAddonList;
                     break;
                 case WEBPAGE_ID.ETS2_LT:
                     //ets2.lt
                     ets2lt.Ets2LtProcess ets2LtProcess = new ets2lt.Ets2LtProcess();
-                    ets2LtProcess.startParsing(selectedYear, selectedMonth, selectedDay);
+                    ets2LtProcess.startParsing(0, 0, 0);
                     break;
                 default: break;
             }

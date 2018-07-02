@@ -168,5 +168,8 @@
   <ItemGroup>
     <Resource Include="images\exit_48x48.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\refresh_64x64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

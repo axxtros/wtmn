@@ -34,8 +34,11 @@ namespace wspd.ets2lt
             return addonList;
         }
 
-        public void startParsing(int limitYear, int limitMonth, int limitDay)
+        public void startParsing(int selectedYear, int selectedMonth, int selectedDay)
         {
+            int limitYear = 0;
+            int limitMonth = 0;
+            int limitDay = 0;
             Console.WriteLine("ets2.lt process start!");
 
             addonList = new List<AddonEntity>();
