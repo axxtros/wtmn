@@ -214,7 +214,55 @@ namespace watchmen.webpageForms
 
         private void loadFromFile()
         {
-            
+            addonList.Clear();
+            string line = null;
+            System.IO.StreamReader file = new System.IO.StreamReader(process.getFileName());
+            while ((line = file.ReadLine()) != null)
+            {
+                if (line[0] == Properties.Resources.FILE_META_LINE_CHARACTER[0])
+                {
+                    int firstSpaceIndex = line.IndexOf(' ');
+                    string marker = line.Substring(0, firstSpaceIndex);
+                    if (marker.Equals(createDateMarker))
+                    {
+                        createDate.Content = line.Substring(firstSpaceIndex, line.Length - firstSpaceIndex).Trim();
+                    }
+                    else if (marker.Equals(limitDateMarker))
+                    {
+                        limitDate.Content = line.Substring(firstSpaceIndex, line.Length - firstSpaceIndex).Trim();
+                    }
+                }
+                else
+                {
+                    String[] addonParams = line.Split(Properties.Resources.FILE_SEPARATOR_CHARACTER[0]);
+                    AddonEntity addonItem = createAddonFromFileParams(addonParams);
+                    addonList.Add(addonItem);
+                }
+            }
+            file.Close();
+            refreshAddonTabControl();
+        }
+
+        private AddonEntity createAddonFromFileParams(String[] addonParams)
+        {
+            AddonEntity addon = new AddonEntity();
+            //linenumber
+            addon.ListIndex = Int32.Parse(addonParams[0]);
+            //type
+            addon.Type = AddonTypeConverter.GetType(addonParams[1]);                        
+            //Name
+            addon.Name = addonParams[2];
+            //AddonURL
+            addon.AddonURL = addonParams[3];
+            //Page
+            addon.Page = Int32.Parse(addonParams[4]);
+            //Year
+            addon.Year = Int32.Parse(addonParams[5]);
+            //Month
+            addon.Month = Int32.Parse(addonParams[6]);
+            //Day
+            addon.Day = Int32.Parse(addonParams[7]);
+            return addon;
         }
 
         #region backgroundWorker vezérlő metódusok

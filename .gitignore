@@ -164,3 +164,5 @@ wspd/wspd/obj/Debug/wspd.exe
 wspd/wspd/obj/Debug/wspd.pdb
 watchmen/obj/Debug/build.force
 watchmen/bin/Debug/armaholic_addons.txt
+.vs/watchmen/DesignTimeBuild/.dtbcache
+wspd/wspd/obj/Debug/DesignTimeResolveAssemblyReferences.cache
