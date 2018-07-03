@@ -55,9 +55,9 @@ namespace wspd.parsers
         private int selectedYear;
         private int selectedMonth;
         private int selectedDay;
-        private List<AddonEntity> armaholicAddonList;
-        private HtmlWeb armaholicWeb;
-        private HtmlDocument armaholicDoc;
+        private List<AddonEntity> addonList;
+        private HtmlWeb webPage;
+        private HtmlDocument htmlDoc;
         private int addonCounter;
 
         public ArmaholicParserProcess()
@@ -65,15 +65,20 @@ namespace wspd.parsers
             //NOP
         }        
 
+        public void startParsing(int pageNumber)
+        {
+            startParsing(2012, 1, 1);               //armaholic esetében dátum van, ezért itt ezt nem jó meghívni, csak az interface miatt van
+        }
+
         public void startParsing(int selectedYear, int selectedMonth, int selectedDay)
         {
             this.selectedYear = selectedYear;
             this.selectedMonth = selectedMonth;
             this.selectedDay = selectedDay;
 
-            armaholicAddonList = new List<AddonEntity>();
+            addonList = new List<AddonEntity>();
             addonCounter = 0;
-            armaholicWeb = new HtmlWeb();
+            webPage = new HtmlWeb();
             foreach (ArmaholicResource addonRes in ArmaholicAddonsURL.ARMAHOLIC_RESOURCES)
             {
                 processParsingPage(addonRes.Url, addonRes.AddonType);
@@ -85,15 +90,15 @@ namespace wspd.parsers
         {
             String pageURL = startingPageURL;
             int currentPageNumber = 1;            
-            armaholicDoc = armaholicWeb.Load(pageURL);
-            while (armaholicDoc != null)
+            htmlDoc = webPage.Load(pageURL);
+            while (htmlDoc != null)
             {
                 //Console.WriteLine("Parsing! Page: " + currentPageNumber + " Page url: " + pageURL);
-                getAddonAndDate(armaholicDoc.DocumentNode.Descendants(), currentAddonType, currentPageNumber);
+                getAddonAndDate(htmlDoc.DocumentNode.Descendants(), currentAddonType, currentPageNumber);
 
                 try
                 {
-                    pageURL = getNextPageUrl(armaholicDoc.DocumentNode.Descendants()).Replace("amp;", "");
+                    pageURL = getNextPageUrl(htmlDoc.DocumentNode.Descendants()).Replace("amp;", "");
                 }
                 catch (System.NullReferenceException)
                 {
@@ -101,11 +106,11 @@ namespace wspd.parsers
                 }
                 if (pageURL != null)
                 {
-                    armaholicDoc = armaholicWeb.Load(pageURL);
+                    htmlDoc = webPage.Load(pageURL);
                 }
                 else
                 {
-                    armaholicDoc = null;
+                    htmlDoc = null;
                     break;
                 }
                 ++currentPageNumber;
@@ -160,7 +165,7 @@ namespace wspd.parsers
         {
             if(addonItem.Year >= this.selectedYear && addonItem.Month >= this.selectedMonth && addonItem.Day >= this.selectedDay)
             {
-                armaholicAddonList.Add(addonItem);
+                addonList.Add(addonItem);
             }
         }
 
@@ -189,7 +194,7 @@ namespace wspd.parsers
         #region getters/setters
         public List<AddonEntity> getAddonList()
         {
-            return armaholicAddonList != null ? armaholicAddonList : new List<AddonEntity>();
+            return addonList != null ? addonList : new List<AddonEntity>();
         }
 
         public string getParserName()

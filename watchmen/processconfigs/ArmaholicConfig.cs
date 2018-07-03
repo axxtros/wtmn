@@ -6,8 +6,7 @@ using wspd.parsers;
 namespace watchmen.processconfigs
 {
     public class ArmaholicConfig : interfaces.ConfigInterface
-    {
-        private ADDON_TYPES[] addonTypes;
+    {        
 
         public ADDON_TYPES[] getAddonTypes()
         {

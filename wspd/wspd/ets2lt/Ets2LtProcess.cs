@@ -77,5 +77,10 @@ namespace wspd.ets2lt
             Console.WriteLine("\nets2.lt process ending! Press any key to continue...\n");
             Console.ReadKey();
         }
+
+        public void startParsing(int pageNumber)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

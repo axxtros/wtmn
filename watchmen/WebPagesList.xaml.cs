@@ -77,7 +77,9 @@ namespace watchmen
                         armaholicConfig.getProcess());
                     break;
                 case "ets2lt":
-                    //wspdEngine.webpageParser(wspd.WEBPAGE_ID.ETS2_LT);
+                    
+
+
                     break;                
             }
             if(currentUserCtrl != null)

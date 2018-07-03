@@ -166,3 +166,10 @@ watchmen/obj/Debug/build.force
 watchmen/bin/Debug/armaholic_addons.txt
 .vs/watchmen/DesignTimeBuild/.dtbcache
 wspd/wspd/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+obj/Docker/TargetOS.cache
+docker-compose.yml
+docker-compose.override.yml
+docker-compose.dcproj
+watchmen/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+wspd/wspd/.dockerignore
+wspd/wspd/Dockerfile

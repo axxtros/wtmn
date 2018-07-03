@@ -18,6 +18,12 @@ namespace wspd.interfaces
         void startParsing(int selectedYear, int selectedMonth, int selectedDay);
 
         /// <summary>
+        /// Az adott weboldalt innen kezdi el felolvasni.
+        /// </summary>
+        /// <param name="pageNumber">Eddig az oldalig.</param>
+        void startParsing(int pageNumber);
+
+        /// <summary>
         /// Ebbe a listába jönnek vissza a kapott addon-ok.
         /// </summary>
         /// <returns></returns>
