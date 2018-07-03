@@ -6,12 +6,15 @@
              xmlns:local="clr-namespace:watchmen"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="{Binding ActualWidth, RelativeSource = {RelativeSource AncestorType = {x:Type Window}}}">
-    <Grid Background="White" >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <StackPanel Name="sideMenuPanel" Grid.Column="0">
-            <!--<Button Height="40" Click="Side_Menu_Button_Click_Event">Test Button</Button>-->
-        </StackPanel>
-    </Grid>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <Grid Background="White" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <StackPanel Name="sideMenuPanel" Grid.Column="0">
+                <!--<Button Height="40" Click="Side_Menu_Button_Click_Event">Test Button</Button>-->
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
 </UserControl>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using watchmen.processconfigs;
 //using wspd.armaholic;
 using wspd.commons.entity;
 using wspd.parsers;
@@ -67,26 +68,13 @@ namespace watchmen
             switch (buttonID)
             {
                 case "armaholic":
-                    ADDON_TYPES[] addonTypes = {
-                        ADDON_TYPES.GEAR,
-                        ADDON_TYPES.PACKS,
-                        ADDON_TYPES.MISCELLANEOUS,
-                        ADDON_TYPES.OBJECTS,
-                        ADDON_TYPES.REPLACEMENT_PACKS,
-                        ADDON_TYPES.SOUNDS,
-                        ADDON_TYPES.TERRAIN,
-                        ADDON_TYPES.UNITS,
-                        ADDON_TYPES.WEAPONS,
-                        ADDON_TYPES.CHOPPERS,
-                        ADDON_TYPES.HEAVY_ARMOR,
-                        ADDON_TYPES.LIGHT_ARMOR,
-                        ADDON_TYPES.VEHICLE_PACKS,
-                        ADDON_TYPES.PLANES,
-                        ADDON_TYPES.SEA,
-                        ADDON_TYPES.WHEELED
-                    };
-                    ArmaholicParserProcess process = new ArmaholicParserProcess();
-                    currentUserCtrl = new webpageForms.WebPageForm(process.getParserName(), Color.FromArgb(255, 227, 225, 214), Color.FromArgb(255, 136, 119, 93), addonTypes, process);
+                    ArmaholicConfig armaholicConfig = new ArmaholicConfig();
+                    currentUserCtrl = new webpageForms.WebPageForm(
+                        armaholicConfig.getProcess().getParserName(),                        
+                        Color.FromArgb(255, 227, 225, 214),
+                        Color.FromArgb(255, 136, 119, 93),
+                        armaholicConfig.getAddonTypes(),
+                        armaholicConfig.getProcess());
                     break;
                 case "ets2lt":
                     //wspdEngine.webpageParser(wspd.WEBPAGE_ID.ETS2_LT);

@@ -77,6 +77,8 @@
     <Compile Include="commonForms\AddonListForm.xaml.cs">
       <DependentUpon>AddonListForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="interfaces\ConfigInterface.cs" />
+    <Compile Include="processconfigs\ArmaholicConfig.cs" />
     <Compile Include="ProgressBarDialogWindow.xaml.cs">
       <DependentUpon>ProgressBarDialogWindow.xaml</DependentUpon>
     </Compile>
@@ -152,9 +154,7 @@
       <Name>wspd</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\exit_48x48.png" />
   </ItemGroup>
