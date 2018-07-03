@@ -81,9 +81,6 @@
       <DependentUpon>ProgressBarDialogWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="utils\StaticResources.cs" />
-    <Compile Include="webpageForms\ArmaholicForm.xaml.cs">
-      <DependentUpon>ArmaholicForm.xaml</DependentUpon>
-    </Compile>
     <Compile Include="webpageForms\WebPageForm.xaml.cs">
       <DependentUpon>WebPageForm.xaml</DependentUpon>
     </Compile>
@@ -107,10 +104,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ProgressBarDialogWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="webpageForms\ArmaholicForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

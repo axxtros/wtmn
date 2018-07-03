@@ -88,7 +88,7 @@ namespace wspd.parsers
             armaholicDoc = armaholicWeb.Load(pageURL);
             while (armaholicDoc != null)
             {
-                Console.WriteLine("Parsing! Page: " + currentPageNumber + " Page url: " + pageURL);
+                //Console.WriteLine("Parsing! Page: " + currentPageNumber + " Page url: " + pageURL);
                 getAddonAndDate(armaholicDoc.DocumentNode.Descendants(), currentAddonType, currentPageNumber);
 
                 try
@@ -98,7 +98,6 @@ namespace wspd.parsers
                 catch (System.NullReferenceException)
                 {
                     pageURL = null;
-                    Console.WriteLine("End parsing!");
                 }
                 if (pageURL != null)
                 {
@@ -132,7 +131,7 @@ namespace wspd.parsers
                             addonItem = new AddonEntity(currentAddonType, currentPage);
                             addonItem.Name = addonName;
                             addonItem.AddonURL = addonLinkUrl;
-                            Console.WriteLine(addonName + " " + addonLinkUrl);
+                            //Console.WriteLine(addonName + " " + addonLinkUrl);
                         }
                     }
                     //addon date
@@ -150,7 +149,7 @@ namespace wspd.parsers
                             addonItem.Day = Int32.Parse(addonDay);
                             addonItem.ListIndex = ++addonCounter;                            
                             addAddonItemToFilteredList(addonItem);
-                            Console.WriteLine(addonDate + " year: " + addonYear + " month: " + addonMonth + " day: " + addonDay);
+                            //Console.WriteLine(addonDate + " year: " + addonYear + " month: " + addonMonth + " day: " + addonDay);
                         }
                     }
                 }

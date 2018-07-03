@@ -39,6 +39,7 @@ namespace watchmen.webpageForms
         private string limitDateMarker;
         private string fileAddonStartMarker;
         private string fileAddonEndMarker;
+        private bool isWebParsing;
 
         public WebPageForm(String webPageTitle, Color gardientLeftColor, Color gardientRightColor, ADDON_TYPES[] addonTypes, ProcessInterface processObject)
         {
@@ -48,6 +49,7 @@ namespace watchmen.webpageForms
             this.process = processObject;
             this.now = DateTime.Now;
             init(webPageTitle, gardientLeftColor, gardientRightColor);
+            isWebParsing = false;
             this.DataContext = this;
         }
 
@@ -187,7 +189,7 @@ namespace watchmen.webpageForms
 
         private void saveToFile()
         {
-            if (addonList != null && addonList.Count > 0)
+            if (isWebParsing && addonList != null && addonList.Count > 0)
             {
                 using (StreamWriter outputFile = new StreamWriter(process.getFileName()))
                 {
@@ -209,6 +211,7 @@ namespace watchmen.webpageForms
                     }
                     outputFile.WriteLine(fileAddonEndMarker + " ");
                 }
+                isWebParsing = false;
             }
         }
 
@@ -281,6 +284,7 @@ namespace watchmen.webpageForms
         private void webProcess()
         {            
             process.startParsing(SelectedYear, SelectedMonth, SelectedDay);
+            isWebParsing = true;
             this.addonList = process.getAddonList();
         }
 
