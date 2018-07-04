@@ -10,7 +10,7 @@ namespace wspd.interfaces
     public interface ProcessInterface
     {
         /// <summary>
-        /// Az adott weboldalt innen kezdi el felolvasni.
+        /// Ha az adott weboldalt dátum alapján kell felolvasni, akkor ezt a metódust kell meghívni.
         /// </summary>
         /// <param name="selectedYear"></param>
         /// <param name="selectedMonth"></param>
@@ -18,7 +18,7 @@ namespace wspd.interfaces
         void startParsing(int selectedYear, int selectedMonth, int selectedDay);
 
         /// <summary>
-        /// Az adott weboldalt innen kezdi el felolvasni.
+        /// Ha az adott weboldalt oldalszám alapján kell felolvasni, akkor ezt a metódust kell meghívni.
         /// </summary>
         /// <param name="pageNumber">Eddig az oldalig.</param>
         void startParsing(int pageNumber);

@@ -47,8 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="commons\AddonEntity.cs" />
-    <Compile Include="ets2lt\Ets2LtParser.cs" />
-    <Compile Include="ets2lt\Ets2LtProcess.cs" />
     <Compile Include="interfaces\ProcessInterface.cs" />
     <Compile Include="parsers\ArmaholicParserProcess.cs" />
     <Compile Include="parsers\Ets2ltParserProcess.cs" />

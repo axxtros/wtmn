@@ -173,3 +173,6 @@ docker-compose.dcproj
 watchmen/obj/Debug/DesignTimeResolveAssemblyReferences.cache
 wspd/wspd/.dockerignore
 wspd/wspd/Dockerfile
+watchmen/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll
+watchmen/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll
+watchmen/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll

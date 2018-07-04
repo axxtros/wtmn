@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace wspd.commons.entity
 {
+
     public enum ADDON_TYPES {
         NONE = 0,
 
@@ -121,12 +122,12 @@ namespace wspd.commons.entity
         #region getters/setters
         public ADDON_TYPES Type { get => type; set => type = value; }
         public int Page { get => page; set => page = value; }
-        public string Name { get => name.Trim(); set => name = value; }
+        public string Name { get => name != null ? name.Trim() : "-"; set => name = value; }
         public int Year { get => year; set => year = value; }
         public int Month { get => month; set => month = value; }
         public int Day { get => day; set => day = value; }
         public int ListIndex { get => listIndex; set => listIndex = value; }
-        public string AddonURL { get => addonURL.Trim(); set => addonURL = value; }
+        public string AddonURL { get => addonURL != null ? addonURL.Trim() : "-"; set => addonURL = value; }
         #endregion
     }
 }

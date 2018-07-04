@@ -62,28 +62,28 @@ namespace watchmen
         private void Side_Menu_Button_Click_Event(object sender, RoutedEventArgs e)
         {
             mainWindow.contentPanel.Children.Clear();
-            Button sideMenuButton = (Button) sender;            
+            Button sideMenuButton = (Button) sender;
+            interfaces.ConfigInterface config = null;
             UserControl currentUserCtrl = null;            
             string buttonID = sideMenuButton.Name;
             switch (buttonID)
             {
                 case "armaholic":
-                    ArmaholicConfig armaholicConfig = new ArmaholicConfig();
-                    currentUserCtrl = new webpageForms.WebPageForm(
-                        armaholicConfig.getProcess().getParserName(),                        
-                        Color.FromArgb(255, 227, 225, 214),
-                        Color.FromArgb(255, 136, 119, 93),
-                        armaholicConfig.getAddonTypes(),
-                        armaholicConfig.getProcess());
+                    config = new ArmaholicConfig();                    
                     break;
                 case "ets2lt":
-                    
-
-
+                    config = new Ets2LtConfig();                    
                     break;                
             }
-            if(currentUserCtrl != null)
+            if(config != null)
             {
+                currentUserCtrl = new webpageForms.WebPageForm(
+                        config.getProcess().getParserName(),
+                        config.getFirstColor(),
+                        config.getSecondColor(),
+                        config.getAddonTypes(),
+                        config.getProcess(),
+                        config.getParsingType());
                 mainWindow.contentPanel.Children.Add(currentUserCtrl);
             }
         }

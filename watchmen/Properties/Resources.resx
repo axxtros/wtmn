@@ -219,4 +219,7 @@
   <data name="refresh" xml:space="preserve">
     <value>Frissítés</value>
   </data>
+  <data name="page" xml:space="preserve">
+    <value>Oldalszám</value>
+  </data>
 </root>

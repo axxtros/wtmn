@@ -67,7 +67,7 @@ namespace wspd.parsers
 
         public void startParsing(int pageNumber)
         {
-            startParsing(2012, 1, 1);               //armaholic esetében dátum van, ezért itt ezt nem jó meghívni, csak az interface miatt van
+            //NOP
         }
 
         public void startParsing(int selectedYear, int selectedMonth, int selectedDay)

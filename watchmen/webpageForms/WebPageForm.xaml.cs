@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using watchmen.commonForms;
+using watchmen.interfaces;
 using wspd.commons.entity;
 using wspd.interfaces;
 
@@ -27,7 +28,9 @@ namespace watchmen.webpageForms
         private int selectedYear;
         private int selectedMonth;
         private int selectedDay;
+        private int selectedPage;
         private ADDON_TYPES[] addonTypes;
+        private PAGE_PARSER_TYPES parserType;
         private List<AddonEntity> addonList;
         private ProcessInterface process;
         private ProgressBarDialogWindow progressBarDialogWindow;
@@ -41,7 +44,11 @@ namespace watchmen.webpageForms
         private string fileAddonEndMarker;
         private bool isWebParsing;
 
-        public WebPageForm(String webPageTitle, Color gardientLeftColor, Color gardientRightColor, ADDON_TYPES[] addonTypes, ProcessInterface processObject)
+        public WebPageForm(String webPageTitle, 
+            Color gardientLeftColor, Color gardientRightColor, 
+            ADDON_TYPES[] addonTypes, 
+            ProcessInterface processObject, 
+            PAGE_PARSER_TYPES parserType)
         {
             InitializeComponent();
             this.addonList = new List<AddonEntity>();
@@ -50,6 +57,7 @@ namespace watchmen.webpageForms
             this.now = DateTime.Now;
             init(webPageTitle, gardientLeftColor, gardientRightColor);
             isWebParsing = false;
+            this.parserType = parserType;
             this.DataContext = this;
         }
 
@@ -60,6 +68,7 @@ namespace watchmen.webpageForms
             initYearComboBox();
             initMonthComboBox();
             initDayComboBox();
+            initPageComboBox();
             initAddonTabs();
             initBackgroundWorker();
             initFileDates();
@@ -107,6 +116,23 @@ namespace watchmen.webpageForms
                 dayComboBox.Items.Add(dayIdx);                
             }
             SelectedDay = dayComboBox.SelectedIndex = now.Day;
+        }
+
+        private void initPageComboBox()
+        {
+            for (int pageIdx = 1; pageIdx <= 9; pageIdx++)
+            {
+                pageComboBox.Items.Add(pageIdx);
+            }
+            for (int pageIdx = 10; pageIdx <= 99; pageIdx += 5)
+            {
+                pageComboBox.Items.Add(pageIdx);
+            }
+            for (int pageIdx = 100; pageIdx <= 500; pageIdx += 10)
+            {
+                pageComboBox.Items.Add(pageIdx);
+            }
+            SelectedPage = pageComboBox.SelectedIndex = 0;
         }
 
         private void initAddonTabs()
@@ -283,7 +309,14 @@ namespace watchmen.webpageForms
 
         private void webProcess()
         {            
-            process.startParsing(SelectedYear, SelectedMonth, SelectedDay);
+            if(IsParseDateBased)
+            {
+                process.startParsing(SelectedYear, SelectedMonth, SelectedDay);
+            } else if(IsParsePageBased)
+            {
+                process.startParsing(SelectedPage);
+            }
+            
             isWebParsing = true;
             this.addonList = process.getAddonList();
         }
@@ -305,7 +338,17 @@ namespace watchmen.webpageForms
                 lastSelectedTabItem.Content = addonListForm;
                 addonTabs.UpdateLayout();
             }                        
-        }        
+        }
+
+        #region NotifyPropertyChanged
+        private void NotifyPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+        #endregion
 
         #region getters/setters
         public string FormTitle { get => formTitle; set => formTitle = value; }
@@ -333,6 +376,16 @@ namespace watchmen.webpageForms
                 }
             }
         }
+        public int SelectedPage { get => selectedPage;
+            set
+            {
+                if (selectedPage != value)
+                {
+                    selectedPage = value;
+                    NotifyPropertyChanged("SelectedPage");
+                }
+            }
+        }
         public int SelectedDay { get => selectedDay;
             //set => selectedDay = value;
             set
@@ -344,16 +397,15 @@ namespace watchmen.webpageForms
                 }
             }
         }
+        public bool IsParseDateBased
+        {
+            get => parserType == PAGE_PARSER_TYPES.DATE_BASED;
+        }
+        public bool IsParsePageBased
+        {
+            get => parserType == PAGE_PARSER_TYPES.PAGE_BASED;               
+        }        
         #endregion
 
-        #region NotifyPropertyChanged
-        private void NotifyPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-        #endregion        
     }
 }

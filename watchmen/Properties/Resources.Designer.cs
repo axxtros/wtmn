@@ -322,6 +322,15 @@ namespace watchmen.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Oldalszám.
+        /// </summary>
+        public static string page {
+            get {
+                return ResourceManager.GetString("page", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kérem várjon....
         /// </summary>
         public static string please_wait {

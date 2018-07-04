@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.Windows.Media;
+using watchmen.interfaces;
 using wspd.commons.entity;
 using wspd.interfaces;
 using wspd.parsers;
@@ -44,6 +45,11 @@ namespace watchmen.processconfigs
         public ProcessInterface getProcess()
         {
             return new ArmaholicParserProcess();
+        }
+
+        public PAGE_PARSER_TYPES getParsingType()
+        {
+            return PAGE_PARSER_TYPES.DATE_BASED;
         }
     }
 }

@@ -1,9 +1,15 @@
-﻿using System.Drawing;
+﻿using System.Windows.Media;
 using wspd.commons.entity;
 using wspd.interfaces;
 
 namespace watchmen.interfaces
 {
+    public enum PAGE_PARSER_TYPES
+    {
+        DATE_BASED = 1,
+        PAGE_BASED = 2
+    }
+
     interface ConfigInterface
     {
         /// <summary>
@@ -29,5 +35,7 @@ namespace watchmen.interfaces
         /// </summary>
         /// <returns></returns>
         Color getSecondColor();
+
+        PAGE_PARSER_TYPES getParsingType();
     }
 }

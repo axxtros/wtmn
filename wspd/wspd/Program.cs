@@ -48,8 +48,8 @@ namespace wspd
                     break;
                 case WEBPAGE_ID.ETS2_LT:
                     //ets2.lt
-                    ets2lt.Ets2LtProcess ets2LtProcess = new ets2lt.Ets2LtProcess();
-                    ets2LtProcess.startParsing(0, 0, 0);
+                    //ets2lt.Ets2LtProcess ets2LtProcess = new ets2lt.Ets2LtProcess();
+                    //ets2LtProcess.startParsing(0, 0, 0);
                     break;
                 default: break;
             }
