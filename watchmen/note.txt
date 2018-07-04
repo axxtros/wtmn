@@ -11,4 +11,4 @@ A Please Wait dialógus ablaknak kell lennie, és nem szabad rajta maradnia a Cl
 A Please Wait ablakban működjön a progress bar.
 
 Process-ek:
-ets2.lt, skidrow-ok, spintires-es oldalak, 
+ets2.lt, skidrow-ok, spintires-es oldalak, racedepartment, 
