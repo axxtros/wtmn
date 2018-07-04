@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/refresh_64x64.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/splashscreen.png")]
 
 

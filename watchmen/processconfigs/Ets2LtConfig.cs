@@ -29,8 +29,8 @@ namespace watchmen.processconfigs
         }
 
         public Color getFirstColor()
-        {
-            return Color.FromArgb(255, 227, 225, 214);
+        {            
+            return Color.FromArgb(255, 243, 243, 243);
         }
 
         public ProcessInterface getProcess()
@@ -40,7 +40,7 @@ namespace watchmen.processconfigs
 
         public Color getSecondColor()
         {
-            return Color.FromArgb(255, 136, 119, 93);
+            return Color.FromArgb(255, 218, 71, 42);
         }
 
         public PAGE_PARSER_TYPES getParsingType()

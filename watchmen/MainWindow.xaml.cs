@@ -24,7 +24,8 @@ namespace watchmen
     public partial class MainWindow : Window
     {        
         public MainWindow()
-        {            
+        {
+            System.Threading.Thread.Sleep(2000);        //splashscreen delay!
             InitializeComponent();
             this.Title = utils.StaticResources.PROGRAM_FULL_TITLE();
             initToolbar();
