@@ -157,7 +157,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <SplashScreen Include="images\splashScreen.png" />
+    <Resource Include="images\splashScreen.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\exit_48x48.png" />

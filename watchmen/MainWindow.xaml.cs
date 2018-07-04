@@ -25,7 +25,7 @@ namespace watchmen
     {        
         public MainWindow()
         {
-            System.Threading.Thread.Sleep(2000);        //splashscreen delay!
+            //System.Threading.Thread.Sleep(3000);        //splashscreen delay!
             InitializeComponent();
             this.Title = utils.StaticResources.PROGRAM_FULL_TITLE();
             initToolbar();

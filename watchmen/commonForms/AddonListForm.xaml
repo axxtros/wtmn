@@ -17,7 +17,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <!--<ColumnDefinition Width="*" />-->
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Row="0" Grid.Column="0">
@@ -70,13 +70,13 @@
             </DataGrid>
         </StackPanel>
 
-        <StackPanel Grid.Row="0" Grid.Column="1" Margin="10, 0, 0, 0">
+        <!--<StackPanel Grid.Row="0" Grid.Column="1" Margin="10, 0, 0, 0">
             <Button Name="addonRefreshButton" Width="60" Height="60" VerticalAlignment="Center" ToolTip="{x:Static resx:Resources.refresh}">
                 <StackPanel>
                     <Image Source="/watchmen;component/images/refresh_64x64.png" Height="32" Width="32"/>
                 </StackPanel>
             </Button>
-        </StackPanel>
+        </StackPanel>-->
 
     </Grid>
 </UserControl>
