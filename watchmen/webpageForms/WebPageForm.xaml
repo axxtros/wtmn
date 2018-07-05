@@ -58,8 +58,13 @@
             
             <Label Content="{x:Static resx:Resources.create_date}" Height="30" VerticalAlignment="Center" Margin="10, 10, 0, 0"/>
             <Label Name="createDate" Height="30" VerticalAlignment="Center" Margin="0, 10, 0, 0" FontWeight="Bold"/>
-            <Label Content="{x:Static resx:Resources.limit_date}" Height="30" VerticalAlignment="Center" Margin="10, 10, 0, 0"/>
-            <Label Name="limitDate" Height="30" VerticalAlignment="Center" Margin="0, 10, 0, 0" FontWeight="Bold"/>
+            <WrapPanel Visibility="{Binding Path=IsParseDateBased, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <Label Content="{x:Static resx:Resources.limit_date}" Height="30" VerticalAlignment="Center" Margin="10, 10, 0, 0"/>
+            </WrapPanel>
+            <WrapPanel Visibility="{Binding Path=IsParsePageBased, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <Label Content="{x:Static resx:Resources.parsingPageNum}" Height="30" VerticalAlignment="Center" Margin="10, 10, 0, 0"/>
+            </WrapPanel>
+            <Label Name="limitParam" Height="30" VerticalAlignment="Center" Margin="0, 10, 0, 0" FontWeight="Bold"/>
             
             <Button Name="saveButton" Content="{x:Static resx:Resources.save_addons}" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="60" Height="20" Click="saveButton_Click"/>
             <Button Name="loadButton" Content="{x:Static resx:Resources.load_addons}" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="60" Height="20" Click="loadButton_Click"/>

@@ -331,6 +331,15 @@ namespace watchmen.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Lekérdezett lapok száma.
+        /// </summary>
+        public static string parsingPageNum {
+            get {
+                return ResourceManager.GetString("parsingPageNum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kérem várjon....
         /// </summary>
         public static string please_wait {

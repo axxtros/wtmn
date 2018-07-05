@@ -39,7 +39,7 @@ namespace watchmen.webpageForms
         private AddonListForm addonListForm;
         private TabItem lastSelectedTabItem;
         private string createDateMarker;
-        private string limitDateMarker;
+        private string limitMaker;
         private string fileAddonStartMarker;
         private string fileAddonEndMarker;
         private bool isWebParsing;
@@ -161,11 +161,11 @@ namespace watchmen.webpageForms
         private void initFileDates()
         {
             createDateMarker = Properties.Resources.FILE_META_LINE_CHARACTER + "create";
-            limitDateMarker = Properties.Resources.FILE_META_LINE_CHARACTER + "limit";
+            limitMaker = Properties.Resources.FILE_META_LINE_CHARACTER + "limit";
             fileAddonStartMarker = Properties.Resources.FILE_META_LINE_CHARACTER + "start";
             fileAddonEndMarker = Properties.Resources.FILE_META_LINE_CHARACTER + "end";
             createDate.Content = "-";
-            limitDate.Content = "-";
+            limitParam.Content = "-";
         }
 
         #endregion;        
@@ -220,7 +220,13 @@ namespace watchmen.webpageForms
                 using (StreamWriter outputFile = new StreamWriter(process.getFileName()))
                 {
                     outputFile.WriteLine(createDateMarker + " " + wspd.utils.Utils.NowDate().ToString(wspd.utils.Utils.HungaryDateFormat()));
-                    outputFile.WriteLine(limitDateMarker + " " + new DateTime(selectedYear, selectedMonth, selectedDay).ToString(wspd.utils.Utils.HungaryDateFormat()));
+                    if(parserType == PAGE_PARSER_TYPES.DATE_BASED)
+                    {
+                        outputFile.WriteLine(limitMaker + " " + new DateTime(selectedYear, selectedMonth, selectedDay).ToString(wspd.utils.Utils.HungaryDateFormat()));
+                    } else if(parserType == PAGE_PARSER_TYPES.PAGE_BASED)
+                    {
+                        outputFile.WriteLine(limitMaker + " " + SelectedPage);
+                    }                    
                     outputFile.WriteLine(fileAddonStartMarker + " ");
                     foreach (AddonEntity addon in addonList)
                     {
@@ -256,9 +262,9 @@ namespace watchmen.webpageForms
                     {
                         createDate.Content = line.Substring(firstSpaceIndex, line.Length - firstSpaceIndex).Trim();
                     }
-                    else if (marker.Equals(limitDateMarker))
+                    else if (marker.Equals(limitMaker))
                     {
-                        limitDate.Content = line.Substring(firstSpaceIndex, line.Length - firstSpaceIndex).Trim();
+                        limitParam.Content = line.Substring(firstSpaceIndex, line.Length - firstSpaceIndex).Trim();
                     }
                 }
                 else

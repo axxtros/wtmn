@@ -1,64 +1,34 @@
-#create 2018.07.04
-#limit 2018.07.04
+#create 2018.07.05
+#limit 5
 #start 
-1$TRAILER_MOD$Gayant Fridge Trailer$https://ets2.lt/en/gayant-fridge-trailer/$1$2018$7$4
-2$TRAILER_MOD$Schwarzmueller SPA 3E rework by FreD_$https://ets2.lt/en/schwarzmueller-spa-3e-rework-by-fred_/$1$2018$7$4
-3$TRUCK_MOD$DAF XF 105 by vad&k v 5.9.1 (fixed errors)$https://ets2.lt/en/daf-xf-105-by-vadk-v-5-9-1-fixed-errors/$1$2018$7$4
-4$TRUCK_SKIN$T.N.S.T.C Skin Mod v 1.22.23$https://ets2.lt/en/t-n-s-t-c-skin-mod-v-1-22-23/$1$2018$7$4
-5$TRAILER_MOD$SCS Schwarzmuller Reworked$https://ets2.lt/en/scs-schwarzmuller-reworked/$1$2018$7$4
-6$OTHERS$Increase FPS ETS2 [1.30/1.31]$https://ets2.lt/en/increase-fps-ets2-1-30-1-31/$1$2018$7$4
-7$TRUCK_SKIN$Jallikattu Tamilan skin v1.22,23$https://ets2.lt/en/jallikattu-tamilan-skin-v1-2223/$2$2018$7$4
-8$TRAILER_MOD$Asus Trailer$https://ets2.lt/en/asus-trailer-6/$2$2018$7$4
-9$OTHERS$Real Diesel Prices for Euro Truck Simulator 2 map (update 02.07.2018)$https://ets2.lt/en/real-diesel-prices-for-euro-truck-simulator-2-map-update-02-07-2018/$2$2018$7$4
-10$TRAILER_MOD$Wielton NS3C M2$https://ets2.lt/en/wielton-ns3c-m2/$2$2018$7$4
-11$TRUCK_SKIN$Skin Kosmos v1 for Scania T Longline$https://ets2.lt/en/skin-kosmos-v1-for-scania-t-longline-2/$2$2018$7$4
-12$TRUCK_SKIN$Volvo F-Series Manfred Hirschhofer Paint Job$https://ets2.lt/en/volvo-f-series-manfred-hirschhofer-paint-job/$2$2018$7$4
-13$CARS$Chevrolet Opala$https://ets2.lt/en/chevrolet-opala-2/$3$2018$7$4
-14$AI_TRAFFIC$Painted BDF Traffic Pack by Jazzycat v 3.3$https://ets2.lt/en/painted-bdf-traffic-pack-by-jazzycat-v-3-3/$3$2018$7$4
-15$TRAILER_MOD$Trinity Agri Flex Trailer ETS2 1.31.x$https://ets2.lt/en/trinity-agri-flex-trailer-ets2-1-31-x/$3$2018$7$4
-16$TRUCK_SKIN$Volvo FH25 Year Edition Skin Pack [Black] & [Red]$https://ets2.lt/en/volvo-fh25-year-edition-skin-pack-black-red/$3$2018$7$4
-17$TRAILER_MOD$Trailer Pack Malls v 1.01.00$https://ets2.lt/en/trailer-pack-malls-v-1-01-00/$3$2018$7$4
-18$OTHERS$Real Gas Prices update 02.07$https://ets2.lt/en/real-gas-prices-update-02-07/$3$2018$7$4
-19$MAPS$Complic Map v 2.1 (1.31x)$https://ets2.lt/en/complic-map-v-2-1-1-31x/$4$2018$7$4
-20$TRAILER_MOD$Southern Africa Fuel Cisterns$https://ets2.lt/en/southern-africa-fuel-cisterns/$4$2018$7$4
-21$COMBO_SKIN_PACKS$Chelsea (Stanford Bridge) Mapancho Combo Pack$https://ets2.lt/en/chelsea-stanford-bridge-mapancho-combo-pack/$4$2018$7$4
-22$COMBO_SKIN_PACKS$The Black Order Combo Pack$https://ets2.lt/en/the-black-order-combo-pack/$4$2018$7$4
-23$SOUND_MOD$2018 Scania V8 Stock Sound Mod v 7.0 (Brutal Pack)$https://ets2.lt/en/2018-scania-v8-stock-sound-mod-v-7-0-brutal-pack/$4$2018$7$4
-24$OTHERS$Save Game XP Money [1.30/1.31]$https://ets2.lt/en/save-game-xp-money-1-30-1-31/$4$2018$7$4
-25$MAPS$North Map v 1.5$https://ets2.lt/en/north-map-v-1-5/$5$2018$7$4
-26$CARS$BMW 5 Series E60 Pack 1.31 fix$https://ets2.lt/en/bmw-5-series-e60-pack-1-31-fix/$5$2018$7$4
-27$TRAILER_MOD$Dunca Expeditii Romanian Company Profiline Trailer$https://ets2.lt/en/dunca-expeditii-romanian-company-profiline-trailer/$5$2018$7$4
-28$PARTS_TUNING_MOD$Scania S&R Extended Front Bumper 1.31.X$https://ets2.lt/en/scania-sr-extended-front-bumper-1-31-x/$5$2018$7$4
-29$TRAILER_MOD$Tandem Addon for RJL Scania RS & r4 by Kast v 1.8$https://ets2.lt/en/tandem-addon-for-rjl-scania-rs-r4-by-kast-v-1-8/$5$2018$7$4
-30$TRUCK_MOD$Marcopolo GV 1150$https://ets2.lt/en/marcopolo-gv-1150/$5$2018$7$4
-31$TRUCK_MOD$Mercedes Benz Torino$https://ets2.lt/en/mercedes-benz-torino/$6$2018$7$4
-32$SOUND_MOD$Mercedes Benz Travego Retarder Sound$https://ets2.lt/en/mercedes-benz-travego-retarder-sound/$6$2018$7$3
-33$TRAILER_MOD$Big Trailer Sag & Tre  EMD Modding Pack Trailers 2017 V1$https://ets2.lt/en/big-trailer-sag-tre-emd-modding-pack-trailers-2017-v1/$6$2018$7$3
-34$TRUCK_SKIN$White DAF Skin by PatricD$https://ets2.lt/en/white-daf-skin-by-patricd/$6$2018$7$3
-35$OTHERS$Increase XP & Money [1.30/1.31]$https://ets2.lt/en/increase-xp-money-1-30-1-31/$6$2018$7$3
-36$OTHERS$Mod Money and Experience V1.31 Yan Red$https://ets2.lt/en/mod-money-and-experience-v1-31-yan-red/$6$2018$7$3
-37$INTERIOR_MOD$Scania S&R 2016 Orange Black Interior$https://ets2.lt/en/scania-sr-2016-orange-black-interior/$7$2018$7$3
-38$CARS$Nissan GTR R35 (boosted) V1.31$https://ets2.lt/en/nissan-gtr-r35-boosted-v1-31/$7$2018$7$3
-39$OTHERS$Video for Renault Magnum knox_xss and Ikarus 250-59 lux v 1.4$https://ets2.lt/en/video-for-renault-magnum-knox_xss-and-ikarus-250-59-lux-v-1-4/$7$2018$7$3
-40$TRAILER_MOD$Trailer DSH Transport Aga For ETS2 1.30$https://ets2.lt/en/trailer-dsh-transport-aga-for-ets2-1-30/$7$2018$7$3
-41$INTERIOR_MOD$Mercedes Benz 2014 Tuning Interior-Dashboard Red$https://ets2.lt/en/mercedes-benz-2014-tuning-interior-dashboard-red/$7$2018$7$3
-42$TRAILER_MOD$Trailer Cousimar For ETS2 1.30$https://ets2.lt/en/trailer-cousimar-for-ets2-1-30/$7$2018$7$3
-43$TRUCK_MOD$V8K R520 Wolverine Scania 1.31$https://ets2.lt/en/v8k-r520-wolverine-scania-1-31/$8$2018$7$3
-44$TRUCK_SKIN$Edbergs Transport AB$https://ets2.lt/en/edbergs-transport-ab/$8$2018$7$3
-45$SOUND_MOD$Scania Open Pipe Sound Mod [1.30-1.31]$https://ets2.lt/en/scania-open-pipe-sound-mod-1-30-1-31/$8$2018$7$3
-46$TRUCK_MOD$Scania LK 141$https://ets2.lt/en/scania-lk-141/$8$2018$7$3
-47$OTHERS$Volvo B9R-I Shift 1.31 fix$https://ets2.lt/en/volvo-b9r-i-shift-1-31-fix/$8$2018$7$3
-48$TRUCK_MOD$VW Trucks Racing v 1.3$https://ets2.lt/en/vw-trucks-racing-v-1-3/$8$2018$7$3
-49$OTHERS$As Street passsable exit for V. 1.31.XX by Rockeropasiempre$https://ets2.lt/en/as-street-passsable-exit-for-v-1-31-xx-by-rockeropasiempre/$9$2018$7$3
-50$TRAILER_MOD$Corsair Trailer$https://ets2.lt/en/corsair-trailer/$9$2018$7$3
-51$TRUCK_SKIN$DUNCA Expeditii Romanian company Iveco Stralis skin 1.31$https://ets2.lt/en/dunca-expeditii-romanian-company-iveco-stralis-skin-1-31/$9$2018$7$3
-52$AI_TRAFFIC$Classic Cars Traffic Pack by TrafficManiac v 1.0$https://ets2.lt/en/classic-cars-traffic-pack-by-trafficmaniac-v-1-0/$9$2018$7$3
-53$COMBO_SKIN_PACKS$Thor Tenden Transport AS Ekeri$https://ets2.lt/en/thor-tenden-transport-as-ekeri/$9$2018$7$3
-54$CARS$Lamborghini Huracan v 1.0$https://ets2.lt/en/lamborghini-huracan-v-1-0/$9$2018$7$3
-55$TRAILER_MOD$Kraker/NTM/Ekeri Tandem Addon For Scania G Series v 1.0$https://ets2.lt/en/kraker-ntm-ekeri-tandem-addon-for-scania-g-series-v-1-0/$10$2018$7$3
-56$CARS$Audi RS4 v 1.0$https://ets2.lt/en/audi-rs4-v-1-0/$10$2018$7$3
-57$COMBO_SKIN_PACKS$Stone Darkmore Skin & Trailer Geordie$https://ets2.lt/en/stone-darkmore-skin-trailer-geordie/$10$2018$7$3
-58$PARTS_TUNING_MOD$Scania G Series V8 Door Badges Adaption v 1.0$https://ets2.lt/en/scania-g-series-v8-door-badges-adaption-v-1-0/$10$2018$7$3
-59$TRUCK_SKIN$Actros Slovakia$https://ets2.lt/en/actros-slovakia/$10$2018$7$3
-60$INTERIOR_MOD$Scania dark grey interior$https://ets2.lt/en/scania-dark-grey-interior/$10$2018$7$3
+1$TRUCK_SKIN$Mercedes Actros - Michelin$https://ets2.lt/en/mercedes-actros-michelin/$1$2018$7$4
+2$TRUCK_SKIN$İveco Hi Way - Hell Energy Drink$https://ets2.lt/en/iveco-hi-way-hell-energy-drink/$1$2018$7$4
+3$TRUCK_SKIN$Renault Premium - Addidas Version$https://ets2.lt/en/renault-premium-addidas-version/$1$2018$7$4
+4$TRAILER_MOD$Gayant Fridge Trailer$https://ets2.lt/en/gayant-fridge-trailer/$1$2018$7$4
+5$TRAILER_MOD$Schwarzmueller SPA 3E rework by FreD_$https://ets2.lt/en/schwarzmueller-spa-3e-rework-by-fred_/$1$2018$7$4
+6$TRUCK_MOD$DAF XF 105 by vad&k v 5.9.1 (fixed errors)$https://ets2.lt/en/daf-xf-105-by-vadk-v-5-9-1-fixed-errors/$1$2018$7$4
+7$TRUCK_SKIN$T.N.S.T.C Skin Mod v 1.22.23$https://ets2.lt/en/t-n-s-t-c-skin-mod-v-1-22-23/$2$2018$7$4
+8$TRAILER_MOD$SCS Schwarzmuller Reworked$https://ets2.lt/en/scs-schwarzmuller-reworked/$2$2018$7$4
+9$OTHERS$Increase FPS ETS2 [1.30/1.31]$https://ets2.lt/en/increase-fps-ets2-1-30-1-31/$2$2018$7$4
+10$TRUCK_SKIN$Jallikattu Tamilan skin v1.22,23$https://ets2.lt/en/jallikattu-tamilan-skin-v1-2223/$2$2018$7$4
+11$TRAILER_MOD$Asus Trailer$https://ets2.lt/en/asus-trailer-6/$2$2018$7$4
+12$OTHERS$Real Diesel Prices for Euro Truck Simulator 2 map (update 02.07.2018)$https://ets2.lt/en/real-diesel-prices-for-euro-truck-simulator-2-map-update-02-07-2018/$2$2018$7$4
+13$TRAILER_MOD$Wielton NS3C M2$https://ets2.lt/en/wielton-ns3c-m2/$3$2018$7$4
+14$TRUCK_SKIN$Skin Kosmos v1 for Scania T Longline$https://ets2.lt/en/skin-kosmos-v1-for-scania-t-longline-2/$3$2018$7$4
+15$TRUCK_SKIN$Volvo F-Series Manfred Hirschhofer Paint Job$https://ets2.lt/en/volvo-f-series-manfred-hirschhofer-paint-job/$3$2018$7$4
+16$CARS$Chevrolet Opala$https://ets2.lt/en/chevrolet-opala-2/$3$2018$7$4
+17$AI_TRAFFIC$Painted BDF Traffic Pack by Jazzycat v 3.3$https://ets2.lt/en/painted-bdf-traffic-pack-by-jazzycat-v-3-3/$3$2018$7$4
+18$TRAILER_MOD$Trinity Agri Flex Trailer ETS2 1.31.x$https://ets2.lt/en/trinity-agri-flex-trailer-ets2-1-31-x/$3$2018$7$4
+19$TRUCK_SKIN$Volvo FH25 Year Edition Skin Pack [Black] & [Red]$https://ets2.lt/en/volvo-fh25-year-edition-skin-pack-black-red/$4$2018$7$4
+20$TRAILER_MOD$Trailer Pack Malls v 1.01.00$https://ets2.lt/en/trailer-pack-malls-v-1-01-00/$4$2018$7$4
+21$OTHERS$Real Gas Prices update 02.07$https://ets2.lt/en/real-gas-prices-update-02-07/$4$2018$7$4
+22$MAPS$Complic Map v 2.1 (1.31x)$https://ets2.lt/en/complic-map-v-2-1-1-31x/$4$2018$7$4
+23$TRAILER_MOD$Southern Africa Fuel Cisterns$https://ets2.lt/en/southern-africa-fuel-cisterns/$4$2018$7$4
+24$COMBO_SKIN_PACKS$Chelsea (Stanford Bridge) Mapancho Combo Pack$https://ets2.lt/en/chelsea-stanford-bridge-mapancho-combo-pack/$4$2018$7$4
+25$COMBO_SKIN_PACKS$The Black Order Combo Pack$https://ets2.lt/en/the-black-order-combo-pack/$5$2018$7$4
+26$SOUND_MOD$2018 Scania V8 Stock Sound Mod v 7.0 (Brutal Pack)$https://ets2.lt/en/2018-scania-v8-stock-sound-mod-v-7-0-brutal-pack/$5$2018$7$4
+27$OTHERS$Save Game XP Money [1.30/1.31]$https://ets2.lt/en/save-game-xp-money-1-30-1-31/$5$2018$7$4
+28$MAPS$North Map v 1.5$https://ets2.lt/en/north-map-v-1-5/$5$2018$7$4
+29$CARS$BMW 5 Series E60 Pack 1.31 fix$https://ets2.lt/en/bmw-5-series-e60-pack-1-31-fix/$5$2018$7$4
+30$TRAILER_MOD$Dunca Expeditii Romanian Company Profiline Trailer$https://ets2.lt/en/dunca-expeditii-romanian-company-profiline-trailer/$5$2018$7$4
 #end 
