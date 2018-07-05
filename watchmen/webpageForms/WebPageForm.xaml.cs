@@ -280,23 +280,15 @@ namespace watchmen.webpageForms
 
         private AddonEntity createAddonFromFileParams(String[] addonParams)
         {
-            AddonEntity addon = new AddonEntity();
-            //linenumber
-            addon.ListIndex = Int32.Parse(addonParams[0]);
-            //type
-            addon.Type = AddonTypeConverter.GetType(addonParams[1]);                        
-            //Name
-            addon.Name = addonParams[2];
-            //AddonURL
-            addon.AddonURL = addonParams[3];
-            //Page
-            addon.Page = Int32.Parse(addonParams[4]);
-            //Year
-            addon.Year = Int32.Parse(addonParams[5]);
-            //Month
-            addon.Month = Int32.Parse(addonParams[6]);
-            //Day
-            addon.Day = Int32.Parse(addonParams[7]);
+            AddonEntity addon = new AddonEntity();            
+            addon.ListIndex = Int32.Parse(addonParams[0]);              //linenumber            
+            addon.Type = AddonTypeConverter.GetType(addonParams[1]);    //type            
+            addon.Name = addonParams[2];                                //name            
+            addon.AddonURL = addonParams[3];                            //addonURL            
+            addon.Page = Int32.Parse(addonParams[4]);                   //page            
+            addon.Year = Int32.Parse(addonParams[5]);                   //year            
+            addon.Month = Int32.Parse(addonParams[6]);                  //month            
+            addon.Day = Int32.Parse(addonParams[7]);                    //day
             return addon;
         }
 
