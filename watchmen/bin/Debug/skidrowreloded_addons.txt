@@ -1,0 +1,94 @@
+#create 2018.07.10
+#limit 10
+#start 
+0$GAME$Visitor-SKIDROW$https://www.skidrowreloaded.com/visitor-skidrow/$1$2018$7$9
+0$GAME$X-Morph Defense Survival Of The Fittest-CODEX$https://www.skidrowreloaded.com/x-morph-defense-survival-of-the-fittest-codex/$1$2018$7$9
+0$GAME$Vampyr Incl Update 1$https://www.skidrowreloaded.com/vampyr-incl-update-1/$1$2018$7$9
+0$GAME$Remothered Tormented Fathers-GOG$https://www.skidrowreloaded.com/remothered-tormented-fathers-gog/$1$2018$7$8
+0$GAME$GARAGE Bad Trip-ALI213$https://www.skidrowreloaded.com/garage-bad-trip-ali213/$1$2018$7$7
+0$GAME$Freeman Guerrilla Warfare v0.194$https://www.skidrowreloaded.com/freeman-guerrilla-warfare-v0-194/$1$2018$7$7
+0$GAME$I Hate Running Backwards High Stakes-PLAZA$https://www.skidrowreloaded.com/i-hate-running-backwards-high-stakes-plaza/$1$2018$7$6
+0$GAME$WISGR-CODEX$https://www.skidrowreloaded.com/wisgr-codex/$1$2018$7$6
+0$GAME$Hue Defense-CODEX$https://www.skidrowreloaded.com/hue-defense-codex/$1$2018$7$6
+0$GAME$Supraland-Early Access$https://www.skidrowreloaded.com/supraland-early-access/$2$2018$7$5
+0$GAME$Kingdom Come Deliverance From The Ashes-GOG$https://www.skidrowreloaded.com/kingdom-come-deliverance-from-the-ashes-gog/$2$2018$7$5
+0$GAME$Desperados Wanted Dead or Alive Re modernized-PLAZA$https://www.skidrowreloaded.com/desperados-wanted-dead-or-alive-re-modernized-plaza/$2$2018$7$5
+0$GAME$Car Demolition Clicker-SKIDROW$https://www.skidrowreloaded.com/car-demolition-clicker-skidrow/$2$2018$7$5
+0$GAME$Football Manager 2018 v18.3.4-VOKSI$https://www.skidrowreloaded.com/football-manager-2018-v18-3-4-voksi/$2$2018$7$5
+0$GAME$Pillars of Eternity II Deadfire v1.2.0.0017$https://www.skidrowreloaded.com/pillars-of-eternity-ii-deadfire-v1-2-0-0017/$2$2018$7$5
+0$GAME$Ghost of a Tale v7.05-DARKSiDERS$https://www.skidrowreloaded.com/ghost-of-a-tale-v7-05-darksiders/$2$2018$7$5
+0$GAME$Preventive Strike x64-DARKSiDERS$https://www.skidrowreloaded.com/preventive-strike-x64-darksiders/$2$2018$7$4
+0$GAME$Archaica The Path of Light v1.25-DARKSiDERS$https://www.skidrowreloaded.com/archaica-the-path-of-light-v1-25-darksiders/$2$2018$7$4
+0$GAME$A Light in the Dark Incl Manga DLC-DARKSiDERS$https://www.skidrowreloaded.com/a-light-in-the-dark-incl-manga-dlc-darksiders/$3$2018$7$4
+0$GAME$Winds of Change-ALI213$https://www.skidrowreloaded.com/winds-of-change-ali213/$3$2018$7$4
+0$GAME$Nippon Marathon-ALI213$https://www.skidrowreloaded.com/nippon-marathon-ali213/$3$2018$7$4
+0$GAME$Exposure-PLAZA$https://www.skidrowreloaded.com/exposure-plaza/$3$2018$7$4
+0$GAME$Avenging Angel-DARKSiDERS$https://www.skidrowreloaded.com/avenging-angel-darksiders/$3$2018$7$4
+0$GAME$Emergency Robot Simulator-DARKSiDERS$https://www.skidrowreloaded.com/emergency-robot-simulator-darksiders/$3$2018$7$4
+0$GAME$Myrne The Quest-DARKSiDERS$https://www.skidrowreloaded.com/myrne-the-quest-darksiders/$3$2018$7$4
+0$GAME$Transports-ALI213$https://www.skidrowreloaded.com/transports-ali213/$3$2018$7$4
+0$GAME$Double Dragon Neon-DARKSiDERS$https://www.skidrowreloaded.com/double-dragon-neon-darksiders/$3$2018$7$4
+0$GAME$Red Faction Guerrilla ReMarstered-CODEX$https://www.skidrowreloaded.com/red-faction-guerrilla-remarstered-codex/$4$2018$7$3
+0$GAME$Injustice 2-VOKSI$https://www.skidrowreloaded.com/injustice-2-voksi/$4$2018$7$3
+0$GAME$Ultimate Fishing Simulator Build 0.7.3.305$https://www.skidrowreloaded.com/ultimate-fishing-simulator-build-0-7-3-305/$4$2018$7$3
+0$GAME$Trooper 2 Alien Justice-PLAZA$https://www.skidrowreloaded.com/trooper-2-alien-justice-plaza/$4$2018$7$2
+0$GAME$NUMERIC-PLAZA$https://www.skidrowreloaded.com/numeric-plaza/$4$2018$7$2
+0$GAME$Ancestors Legacy Build 48490$https://www.skidrowreloaded.com/ancestors-legacy-build-48490/$4$2018$7$2
+0$GAME$The Eerie Inn-TiNYiSO$https://www.skidrowreloaded.com/the-eerie-inn-tinyiso/$4$2018$7$1
+0$GAME$Raft v1.03$https://www.skidrowreloaded.com/raft-v1-03/$4$2018$7$1
+0$GAME$Hobo Tough Life v0.30.011$https://www.skidrowreloaded.com/hobo-tough-life-v0-30-011/$4$2018$7$1
+0$GAME$Baldurs Gate II Enhanced Edition v2.5-PLAZA$https://www.skidrowreloaded.com/baldurs-gate-ii-enhanced-edition-v2-5-plaza/$5$2018$7$1
+0$GAME$Niche A Genetics Survival Game Wings and Whale-HI2U$https://www.skidrowreloaded.com/niche-a-genetics-survival-game-wings-and-whale-hi2u/$5$2018$7$1
+0$GAME$Super Cat Herding Totally Awesome Edition-DOGE$https://www.skidrowreloaded.com/super-cat-herding-totally-awesome-edition-doge/$5$2018$7$1
+0$GAME$Pro Cycling Manager 2018 WorldDB 2018 DLC-SKIDROW$https://www.skidrowreloaded.com/pro-cycling-manager-2018-worlddb-2018-dlc-skidrow/$5$2018$6$30
+0$GAME$Graviteam Tactics Mius Front Tielieketi Incident-SKIDROW$https://www.skidrowreloaded.com/graviteam-tactics-mius-front-tielieketi-incident-skidrow/$5$2018$6$30
+0$GAME$P.A.M.E.L.A-Early Access$https://www.skidrowreloaded.com/p-a-m-e-l-a-early-access/$5$2018$6$30
+0$GAME$Ys VIII Lacrimosa of Dana v20180629$https://www.skidrowreloaded.com/ys-viii-lacrimosa-of-dana-v20180629/$5$2018$6$30
+0$GAME$Shaq Fu A Legend Reborn Barack Fu-CODEX$https://www.skidrowreloaded.com/shaq-fu-a-legend-reborn-barack-fu-codex/$5$2018$6$30
+0$GAME$Crash Bandicoot N.Sane Trilogy-CODEX$https://www.skidrowreloaded.com/crash-bandicoot-n-sane-trilogy-codex/$5$2018$6$29
+0$GAME$Hot Lava Beta 273368-REVOLT$https://www.skidrowreloaded.com/hot-lava-beta-273368-revolt/$6$2018$6$29
+0$GAME$Original Journey v3.0-HI2U$https://www.skidrowreloaded.com/original-journey-v3-0-hi2u/$6$2018$6$29
+0$GAME$Puyo Puyo Tetris-VOKSI$https://www.skidrowreloaded.com/puyo-puyo-tetris-voksi/$6$2018$6$28
+0$GAME$Forza Motorsport 7-CODEX$https://www.skidrowreloaded.com/forza-7-codex/$6$2018$6$28
+0$GAME$Youropa-SKIDROW$https://www.skidrowreloaded.com/youropa-skidrow/$6$2018$6$28
+0$GAME$Pro Cycling Manager 2018-SKIDROW$https://www.skidrowreloaded.com/pro-cycling-manager-2018-skidrow/$6$2018$6$28
+0$GAME$Dream Alone-CODEX$https://www.skidrowreloaded.com/dream-alone-codex/$6$2018$6$28
+0$GAME$Welcome To The Dreamscape-PLAZA$https://www.skidrowreloaded.com/welcome-to-the-dreamscape-plaza/$6$2018$6$28
+0$GAME$LUMINES REMASTERED-PLAZA$https://www.skidrowreloaded.com/lumines-remastered-plaza/$6$2018$6$28
+0$GAME$Secret of Mana Incl Update 2$https://www.skidrowreloaded.com/secret-of-mana-incl-update-2/$7$2018$6$28
+0$GAME$Lovecrafts Untold Stories-GOG$https://www.skidrowreloaded.com/lovecrafts-untold-stories-gog/$7$2018$6$27
+0$GAME$Affliction-HI2U$https://www.skidrowreloaded.com/affliction-hi2u/$7$2018$6$27
+0$GAME$Kingdom Come Deliverance v1.6$https://www.skidrowreloaded.com/kingdom-come-deliverance-v1-6/$7$2018$6$27
+0$GAME$Pure Farming 2018 v1.2-ALI213$https://www.skidrowreloaded.com/pure-farming-2018-v1-2-ali213/$7$2018$6$27
+0$GAME$Lumines Remastered-ALI213$https://www.skidrowreloaded.com/lumines-remastered-ali213/$7$2018$6$27
+0$GAME$Ashes Cricket v1.0548$https://www.skidrowreloaded.com/ashes-cricket-v1-0548/$7$2018$6$26
+0$GAME$Jettomero Hero of the Universe-ALI213$https://www.skidrowreloaded.com/jettomero-hero-of-the-universe-ali213/$7$2018$6$26
+0$GAME$American Truck Simulator v1.31.2s Incl DLC$https://www.skidrowreloaded.com/american-truck-simulator-v1-31-2s-incl-dlc/$7$2018$6$26
+0$GAME$Soulblight v1.15$https://www.skidrowreloaded.com/soulblight-v1-15/$8$2018$6$26
+0$GAME$Rune Classic Windows 10-PLAZA$https://www.skidrowreloaded.com/rune-classic-windows-10-plaza/$8$2018$6$26
+0$GAME$Mages of Mystralia Archmage v1.6.26515-PLAZA$https://www.skidrowreloaded.com/mages-of-mystralia-archmage-v1-6-26515-plaza/$8$2018$6$25
+0$GAME$Trail Breaking-PLAZA$https://www.skidrowreloaded.com/trail-breaking-plaza/$8$2018$6$25
+0$GAME$Monster Prom-ALI213$https://www.skidrowreloaded.com/monster-prom-ali213/$8$2018$6$24
+0$GAME$Freeman Guerrilla Warfare v0.190$https://www.skidrowreloaded.com/freeman-guerrilla-warfare-v0-190/$8$2018$6$24
+0$GAME$Shift Quantum x64-DARKSiDERS$https://www.skidrowreloaded.com/shift-quantum-x64-darksiders/$8$2018$6$23
+0$GAME$Total War Warhammer II v1.4.1$https://www.skidrowreloaded.com/total-war-warhammer-ii-v1-4-1/$8$2018$6$23
+0$GAME$Sundered Finisher-PLAZA$https://www.skidrowreloaded.com/sundered-finisher-plaza/$8$2018$6$23
+0$GAME$StarCrawlers Hotwire-PLAZA$https://www.skidrowreloaded.com/starcrawlers-hotwire-plaza/$9$2018$6$22
+0$GAME$Esport Manager-ALI213$https://www.skidrowreloaded.com/esport-manager-ali213/$9$2018$6$22
+0$GAME$Red Rover-DARKSiDERS$https://www.skidrowreloaded.com/red-rover-darksiders/$9$2018$6$22
+0$GAME$When They Arrived-ALI213$https://www.skidrowreloaded.com/when-they-arrived-ali213/$9$2018$6$22
+0$GAME$Pillars of Eternity II Deadfire v1.1.1.0064$https://www.skidrowreloaded.com/pillars-of-eternity-ii-deadfire-v1-1-1-0064/$9$2018$6$22
+0$GAME$PC Building Simulator v0.8.3.2$https://www.skidrowreloaded.com/pc-building-simulator-v0-8-3-2/$9$2018$6$22
+0$GAME$Fictorum Observer-PLAZA$https://www.skidrowreloaded.com/fictorum-observer-plaza/$9$2018$6$22
+0$GAME$The Sims 4 Seasons$https://www.skidrowreloaded.com/the-sims-4-seasons/$9$2018$6$21
+0$GAME$Football Manager 2018-VOKSI$https://www.skidrowreloaded.com/football-manager-2018-voksi/$9$2018$6$21
+0$GAME$Ghoststory-CODEX$https://www.skidrowreloaded.com/ghoststory-codex/$10$2018$6$21
+0$GAME$Darkestville Castle MULTI5-TiNYiSO$https://www.skidrowreloaded.com/darkestville-castle-multi5-tinyiso/$10$2018$6$21
+0$GAME$Ballistic Balls to the Wall-PLAZA$https://www.skidrowreloaded.com/ballistic-balls-to-the-wall-plaza/$10$2018$6$21
+0$GAME$Gravity Well-PLAZA$https://www.skidrowreloaded.com/gravity-well-plaza/$10$2018$6$21
+0$GAME$Tekken 7$https://www.skidrowreloaded.com/tekken7-pc/$10$2018$6$21
+0$GAME$Battletech Ironman-PLAZA$https://www.skidrowreloaded.com/battletech-ironman-plaza/$10$2018$6$21
+0$GAME$Deadly Delivery-CODEX$https://www.skidrowreloaded.com/deadly-delivery-codex/$10$2018$6$20
+0$GAME$Kingdoms and Castles Grand Buildings-PLAZA$https://www.skidrowreloaded.com/kingdoms-and-castles-grand-buildings-plaza/$10$2018$6$20
+0$GAME$Dark and Light-SSE$https://www.skidrowreloaded.com/dark-and-light-sse/$10$2018$6$20
+#end 

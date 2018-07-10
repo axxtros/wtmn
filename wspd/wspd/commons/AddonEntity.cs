@@ -41,7 +41,10 @@ namespace wspd.commons.entity
         MAPS = 26,
         CARS = 27,
         OTHERS = 28,
-        NOT_DEFINED = 29       
+        NOT_DEFINED = 29,
+        
+        //skidrow
+        GAME = 30
     };
 
     public static class AddonTypeConverter

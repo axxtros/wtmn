@@ -81,6 +81,7 @@
     <Compile Include="interfaces\ConfigInterface.cs" />
     <Compile Include="processconfigs\ArmaholicConfig.cs" />
     <Compile Include="processconfigs\Ets2LtConfig.cs" />
+    <Compile Include="processconfigs\SkidrowrelodedConfig.cs" />
     <Compile Include="ProgressBarDialogWindow.xaml.cs">
       <DependentUpon>ProgressBarDialogWindow.xaml</DependentUpon>
     </Compile>

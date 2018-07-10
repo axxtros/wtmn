@@ -11,7 +11,8 @@ namespace wspd.utils
     {
         public static Dictionary<string, string> WEB_PAGE_NAME_LIST = new Dictionary<string, string> {            
             { "ets2lt", "www.ets2.lt" },
-            { "armaholic", "www.armaholic.com" }            
+            { "armaholic", "www.armaholic.com" },
+            { "skidrowreloded", "www.skidrowreloded.com" }
         };
     }
 }

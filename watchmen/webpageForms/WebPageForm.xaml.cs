@@ -132,7 +132,8 @@ namespace watchmen.webpageForms
             {
                 pageComboBox.Items.Add(pageIdx);
             }
-            SelectedPage = pageComboBox.SelectedIndex = 0;
+            pageComboBox.SelectedIndex = 0;
+            SelectedPage = 1;
         }
 
         private void initAddonTabs()

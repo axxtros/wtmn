@@ -73,7 +73,10 @@ namespace watchmen
                     break;
                 case "ets2lt":
                     config = new Ets2LtConfig();                    
-                    break;                
+                    break;
+                case "skidrowreloded":
+                    config = new SkidrowrelodedConfig();
+                    break;
             }
             if(config != null)
             {

@@ -53,6 +53,7 @@
     <Compile Include="interfaces\ProcessInterface.cs" />
     <Compile Include="parsers\ArmaholicParserProcess.cs" />
     <Compile Include="parsers\Ets2ltParserProcess.cs" />
+    <Compile Include="parsers\SkidrowrelodedParserProcess.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\StaticResources.cs" />
