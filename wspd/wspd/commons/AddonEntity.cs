@@ -91,6 +91,9 @@ namespace wspd.commons.entity
                 case "OTHERS": return ADDON_TYPES.OTHERS;
                 case "NOT_DEFINED": return ADDON_TYPES.NOT_DEFINED;
 
+                //skidrow
+                case "GAME": return ADDON_TYPES.GAME;
+
                 default: return ADDON_TYPES.NONE;
             }
         }

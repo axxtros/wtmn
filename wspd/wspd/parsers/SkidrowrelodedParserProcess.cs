@@ -60,14 +60,13 @@ namespace wspd.parsers
                 AddonEntity addon = null;
                 foreach (HtmlNode hnode in pageNodes)
                 {
-                    //addon title
-                    //download link
-                    //addon type
+                    //addon title, download link, addon type                    
                     if (hnode.Name == "div" && hnode.Attributes["class"] != null && hnode.Attributes["class"].Value == "post")
                     {                        
                         if (hnode.FirstChild.NextSibling.Name == "h2" && hnode.FirstChild.NextSibling.FirstChild.Name == "a")
                         {
                             addon = new AddonEntity();
+                            addon.ListIndex = addonList.Count + 1;
                             addon.Type = ADDON_TYPES.GAME;
                             addon.Name = hnode.FirstChild.NextSibling.InnerText;                            
                             addon.AddonURL = hnode.FirstChild.NextSibling.FirstChild.Attributes[0].Value;

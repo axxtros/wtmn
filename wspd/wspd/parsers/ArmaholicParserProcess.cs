@@ -121,7 +121,7 @@ namespace wspd.parsers
         {
             if (pageNodes != null && pageNodes.Any())
             {
-                AddonEntity addonItem = null;
+                AddonEntity addon = null;
                 foreach (HtmlNode hnode in pageNodes)
                 {
                     //addon name
@@ -133,9 +133,10 @@ namespace wspd.parsers
                             HtmlNode fontNode = nextNode.FirstChild;
                             String addonName = fontNode.InnerHtml.Remove(0, 6);
                             String addonLinkUrl = ArmaholicAddonsURL.ARMAHOLIC_BASE_WEB_URL + "/" + nextNode.OuterHtml.Substring(nextNode.OuterHtml.IndexOf('=') + 2, nextNode.OuterHtml.IndexOf('>') - 10);
-                            addonItem = new AddonEntity(currentAddonType, currentPage);
-                            addonItem.Name = addonName;
-                            addonItem.AddonURL = addonLinkUrl;
+                            addon = new AddonEntity(currentAddonType, currentPage);
+                            addon.Name = addonName;
+                            addon.AddonURL = addonLinkUrl;
+                            addon.ListIndex = addonList.Count + 1;
                             //Console.WriteLine(addonName + " " + addonLinkUrl);
                         }
                     }
@@ -149,11 +150,11 @@ namespace wspd.parsers
                             String addonYear = addonDate.Substring(0, 4);
                             String addonMonth = addonDate.Substring(5, 2);
                             String addonDay = addonDate.Substring(8, 2);
-                            addonItem.Year = Int32.Parse(addonYear);
-                            addonItem.Month = Int32.Parse(addonMonth);
-                            addonItem.Day = Int32.Parse(addonDay);
-                            addonItem.ListIndex = ++addonCounter;                            
-                            addAddonItemToFilteredList(addonItem);
+                            addon.Year = Int32.Parse(addonYear);
+                            addon.Month = Int32.Parse(addonMonth);
+                            addon.Day = Int32.Parse(addonDay);
+                            addon.ListIndex = ++addonCounter;                            
+                            addAddonItemToFilteredList(addon);
                             //Console.WriteLine(addonDate + " year: " + addonYear + " month: " + addonMonth + " day: " + addonDay);
                         }
                     }

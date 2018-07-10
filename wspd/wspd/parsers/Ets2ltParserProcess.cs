@@ -63,7 +63,7 @@ namespace wspd.parsers
                         var classVal = hnode.Attributes["class"];
                         if(classVal.Value == "title")
                         {                            
-                            addon = new AddonEntity(ADDON_TYPES.NONE, pageNumber);
+                            addon = new AddonEntity(ADDON_TYPES.NONE, pageNumber);                            
                             String addonTitle = hnode.InnerText.
                                 Replace("&#8211;", "-").
                                 Replace("&#038;", "&").
@@ -74,6 +74,7 @@ namespace wspd.parsers
                                 Replace("&#8217;", "'").
                                 Replace("&#215;", "x");
                             addon.Name = addonTitle;
+                            addon.ListIndex = addonList.Count + 1;
                             //Console.WriteLine(addonTitle);
                         }
                         //download link
