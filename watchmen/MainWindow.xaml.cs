@@ -27,7 +27,7 @@ namespace watchmen
         {
             //System.Threading.Thread.Sleep(3000);        //splashscreen delay!
             InitializeComponent();
-            this.Title = utils.StaticResources.PROGRAM_FULL_TITLE();
+            this.Title = utils.StaticResources.PROGRAM_NAME; //PROGRAM_FULL_TITLE();
             initToolbar();
             loadWebpageList();               
         }
