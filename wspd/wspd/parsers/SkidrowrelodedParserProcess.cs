@@ -66,7 +66,7 @@ namespace wspd.parsers
                         if (hnode.FirstChild.NextSibling.Name == "h2" && hnode.FirstChild.NextSibling.FirstChild.Name == "a")
                         {
                             addon = new AddonEntity();
-                            addon.ListIndex = addonList.Count + 1;
+                            addon.ListIndex = ++addonCounter;
                             addon.Type = ADDON_TYPES.GAME;
                             addon.Name = hnode.FirstChild.NextSibling.InnerText;                            
                             addon.AddonURL = hnode.FirstChild.NextSibling.FirstChild.Attributes[0].Value;

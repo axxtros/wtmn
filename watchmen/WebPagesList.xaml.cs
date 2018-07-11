@@ -87,6 +87,7 @@ namespace watchmen
                         config.getAddonTypes(),
                         config.getProcess(),
                         config.getParsingType());
+
                 mainWindow.contentPanel.Children.Add(currentUserCtrl);
             }
         }
