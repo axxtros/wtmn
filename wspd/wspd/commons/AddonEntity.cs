@@ -27,6 +27,7 @@ namespace wspd.commons.entity
         PLANES = 14,
         SEA = 15,
         WHEELED = 16,
+        MODULES = 31,
 
         //ets2.lt
         TRUCK_MOD = 17,

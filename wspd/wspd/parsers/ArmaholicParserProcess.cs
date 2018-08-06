@@ -24,6 +24,7 @@ namespace wspd.parsers
             new ArmaholicResource(@"http://www.armaholic.com/list.php?c=arma3_files_addons_islands&s=title&w=asc&d=0", ADDON_TYPES.TERRAIN),
             new ArmaholicResource(@"http://www.armaholic.com/list.php?c=arma3_files_addons_units&s=title&w=asc&d=0", ADDON_TYPES.UNITS),
             new ArmaholicResource(@"http://www.armaholic.com/list.php?c=arma3_files_addons_weapons&s=title&w=asc&d=0", ADDON_TYPES.WEAPONS),
+            new ArmaholicResource(@"http://www.armaholic.com/list.php?c=arma3_files_modules&s=title&w=asc&d=0", ADDON_TYPES.MODULES),
             //vehicles
             new ArmaholicResource(@"http://www.armaholic.com/list.php?c=arma3_files_addons_vehicles_chopper&s=title&w=asc&d=0", ADDON_TYPES.CHOPPERS),
             new ArmaholicResource(@"http://www.armaholic.com/list.php?c=arma3_files_addons_vehicles_heavyarmor&s=title&w=asc&d=0", ADDON_TYPES.HEAVY_ARMOR),

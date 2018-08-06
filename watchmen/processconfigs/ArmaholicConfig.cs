@@ -27,7 +27,8 @@ namespace watchmen.processconfigs
                 ADDON_TYPES.VEHICLE_PACKS,
                 ADDON_TYPES.PLANES,
                 ADDON_TYPES.SEA,
-                ADDON_TYPES.WHEELED
+                ADDON_TYPES.WHEELED,
+                ADDON_TYPES.MODULES
             };
             return addonTypes;
         }
