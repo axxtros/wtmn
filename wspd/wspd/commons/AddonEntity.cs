@@ -76,6 +76,7 @@ namespace wspd.commons.entity
                 case "PLANES": return ADDON_TYPES.PLANES;
                 case "SEA": return ADDON_TYPES.SEA;
                 case "WHEELED": return ADDON_TYPES.WHEELED;
+                case "MODULES": return ADDON_TYPES.MODULES;
 
                 //ets2.lt                
                 case "TRUCK_MOD": return ADDON_TYPES.TRUCK_MOD;
