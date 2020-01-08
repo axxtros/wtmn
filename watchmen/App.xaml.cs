@@ -15,8 +15,8 @@ namespace watchmen
     /// </summary>
     public partial class App : Application
     {
-        private const int MINIMUM_SPLASH_TIME = 2000;   // Miliseconds
-        private const int SPLASH_FADE_TIME = 500;       // Miliseconds
+        private const int MINIMUM_SPLASH_TIME = 0;    // Miliseconds (eredetileg 3000)
+        private const int SPLASH_FADE_TIME = 0;       // Miliseconds (eredetileg 500)
 
         protected override void OnStartup(StartupEventArgs e)
         {

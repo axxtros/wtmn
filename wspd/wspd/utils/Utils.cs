@@ -8,7 +8,6 @@ namespace wspd.utils
 {
     public class Utils
     {        
-
         public static DateTime NowDate()
         {
             return DateTime.Now;

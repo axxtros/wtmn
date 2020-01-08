@@ -37,16 +37,16 @@ namespace watchmen
         
         private void initWebPages()
         {
-            foreach (KeyValuePair<string, string> menuItem in wspd.utils.StaticResources.WEB_PAGE_NAME_LIST)
+            foreach (KeyValuePair<wspd.utils.StaticResources.WEBPAGE_KEYS, string> menuItem in wspd.utils.StaticResources.WEB_PAGE_NAME_LIST)
             {                
                 sideMenuPanel.Children.Add(createSideMenuButton(menuItem.Key, menuItem.Value));
             }            
         }
 
-        private Button createSideMenuButton(string buttunID, String buttonText)
+        private Button createSideMenuButton(wspd.utils.StaticResources.WEBPAGE_KEYS buttunID, String buttonText)
         {
             Button resultMenuButton = new Button();
-            resultMenuButton.Name = buttunID;
+            resultMenuButton.Name = buttunID.ToString();
             resultMenuButton.Content = buttonText;
             resultMenuButton.Height = 40;
             resultMenuButton.MinWidth = 200;
@@ -64,20 +64,30 @@ namespace watchmen
             mainWindow.contentPanel.Children.Clear();
             Button sideMenuButton = (Button) sender;
             interfaces.ConfigInterface config = null;
-            UserControl currentUserCtrl = null;            
+            UserControl currentUserCtrl = null;
             string buttonID = sideMenuButton.Name;
-            switch (buttonID)
-            {
-                case "armaholic":
-                    config = new ArmaholicConfig();                    
-                    break;
-                case "ets2lt":
-                    config = new Ets2LtConfig();                    
-                    break;
-                case "skidrowreloded":
-                    config = new SkidrowrelodedConfig();
-                    break;
+            
+            if(buttonID.Equals(wspd.utils.StaticResources.WEBPAGE_KEYS.ARMAHOLIC.ToString())) {
+                config = new ArmaholicConfig();
+            } else if(buttonID.Equals(wspd.utils.StaticResources.WEBPAGE_KEYS.ETS2LT.ToString())) {
+                config = new Ets2LtConfig();
+            } else if (buttonID.Equals(wspd.utils.StaticResources.WEBPAGE_KEYS.SKIDROWRELODED.ToString())) {
+                config = new SkidrowrelodedConfig();
             }
+
+            //switch (buttonID)
+            //{
+            //    case wspd.utils.StaticResources.WEBPAGE_KEYS.ARMAHOLIC.ToString():
+            //        config = new ArmaholicConfig();                    
+            //        break;
+            //    case "ets2lt":
+            //        config = new Ets2LtConfig();                    
+            //        break;
+            //    case "skidrowreloded":
+            //        config = new SkidrowrelodedConfig();
+            //        break;
+            //}
+
             if(config != null)
             {
                 currentUserCtrl = new webpageForms.WebPageForm(
